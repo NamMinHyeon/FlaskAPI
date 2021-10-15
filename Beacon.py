@@ -303,27 +303,28 @@ class UpdateBeacon(Resource):
 class PutBeaconHistory(Resource):
 
     def post(self):
-        """비콘 등록 (정상 등록: 01, 등록 실패: 99)"""
+        """비콘 통신 이력 등록 (정상 등록: 01, 등록 실패: 99)"""
 
         # POST 방식으로 수신
+        user_id = request.json.get('user_id')
         beacon_id = request.json.get('beacon_id')
-        major_id = request.json.get('major_id')
-        minor_id = request.json.get('minor_id')
+        activity_code = request.json.get('user_id')
+        point_code = request.json.get('beacon_id')
+        building_code = request.json.get('user_id')
 
+        user_id_str = str(user_id)
         beacon_id_str = str(beacon_id)
-        major_id_str = str(major_id)
-        minor_id_str = str(minor_id)
+        activity_code_str = str(activity_code)
+        point_code_str = str(point_code)
+        building_code_str = str(building_code)
 
         cursor = conn.cursor()
 
-        params = (beacon_id_str, major_id_str, minor_id_str)
-        cursor.callproc('SET_BEACON_INFO', params)
+        params = (user_id_str, beacon_id_str, activity_code_str, point_code_str, building_code_str)
+        cursor.callproc('SET_BEACON_HISTORY_INFO', params)
 
         result = [row for row in cursor]
 
-        # cursor 정상적으로 종료 필요
-        # Autocommit을 지원하지 않음
-        # commit 전에 result에 결과값 맵핑 필수
         cursor.close()
         conn.commit()
 
@@ -332,13 +333,6 @@ class PutBeaconHistory(Resource):
             return {
                 "result"          : result[0][0],
                 "message"         : "success",
-                "message_detail"  : str(result[0][1]).lower()
-            }
-        # 등록 실패 - 중복
-        elif result[0][0] == '99':
-            return {
-                "result"          : result[0][0],
-                "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()
             }
         # 등록 실패 - 기타

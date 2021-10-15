@@ -308,9 +308,9 @@ class PutBeaconHistory(Resource):
         # POST 방식으로 수신
         user_id = request.json.get('user_id')
         beacon_id = request.json.get('beacon_id')
-        activity_code = request.json.get('user_id')
-        point_code = request.json.get('beacon_id')
-        building_code = request.json.get('user_id')
+        activity_code = request.json.get('activity_code')
+        point_code = request.json.get('point_code')
+        building_code = request.json.get('building_code')
 
         user_id_str = str(user_id)
         beacon_id_str = str(beacon_id)

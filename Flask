@@ -1,0 +1,14 @@
+server {
+	listen 80;
+	server_name 3.37.177.203;
+
+	charset utf-8; 
+
+	location /static {
+		root /home/ubuntu/project/Flask;
+	}
+	location / {
+		include proxy_params;
+		proxy_pass http://unix:/tmp/gunicorn.sock;
+	}
+}

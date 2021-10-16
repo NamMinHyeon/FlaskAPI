@@ -333,8 +333,9 @@ class PutBeaconHistory(Resource):
             return {
                 "result"          : result[0][0],
                 "message"         : "success",
-                "message_detail"  : str(result[0][1]).lower()
-            }
+                "message_detail"  : str(result[0][1]).lower(),
+                "max_floor"  : str(result[0][2]).lower(),
+                "sum_point"  : str(result[0][3]).lower()}
         # 등록 실패 - 기타
         else:
             return {

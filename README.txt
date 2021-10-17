@@ -9,7 +9,7 @@
 2. Nginx → Gunicorn → [Socket] → Flask [wsgi.py (Entry Point) → app.py]
 
 3. Start Option
- - sudo nginx -t		        : Nginx Env Check
+ - sudo nginx -t		              : Nginx Env Check
  - sudo systemctl restart nginx : Nginx Env Restart
 
  - sudo systemctl start gunicorn.service   : Gunicorn Start

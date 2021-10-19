@@ -302,7 +302,7 @@ class UpdateBeacon(Resource):
 @Beacon.route('/beaconCall')
 class PutBeaconHistory(Resource):
 
-    def post(self):
+    def post(self): 
         """비콘 통신 이력 등록 (정상 등록: 01, 등록 실패: 99)"""
 
         # POST 방식으로 수신

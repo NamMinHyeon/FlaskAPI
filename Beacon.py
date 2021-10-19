@@ -32,7 +32,7 @@ conn =  pymssql.connect(server , username, password, database)
 # 1. 사용자 관련 API
 # └ LOGIN       : 사용자 로그인
 # └ REGISTER    : 사용자 등록
-@Beacon.route('/LOGIN')
+@Beacon.route('/login')
 class GetUser(Resource):
 
     def post(self):
@@ -68,7 +68,7 @@ class GetUser(Resource):
                 "sum_point"       : result[0][3]
             }
 
-@Beacon.route('/REGISTER')
+@Beacon.route('/register')
 class PutUser(Resource):
 
     def post(self):
@@ -123,12 +123,12 @@ class PutUser(Resource):
 
 
 # 2. 비콘 관련 API
-# └ BEACON-REGISTER   : 비콘 등록
-# └ BEACON-SELECT     : 비콘 호출
-# └ BEACON-SELECT-ALL : 비콘 호출 전체
-# └ BEACON-UPDATE     : 비콘 수정
-# └ BEACON-HISTORY    : 비콘 통신 이력 저장
-@Beacon.route('/BEACON-REGISTER')
+# └ beaconRegister   : 비콘 등록
+# └ beaconSelect     : 비콘 정보 호출 (층수)
+# └ beaconSelectAll  : 비콘 호출 전체
+# └ beaconUpdate     : 비콘 '층' 정보 수정
+# └ beaconCall       : 비콘 통신 이력 저장
+@Beacon.route('/beaconRegister')
 class PutBeacon(Resource):
 
     def post(self):
@@ -178,7 +178,7 @@ class PutBeacon(Resource):
                 "message_detail"  : str( result[0][1]).lower()
             }
 
-@Beacon.route('/BEACON-SELECT')
+@Beacon.route('/beaconSelect')
 class GetBeacon(Resource):
 
     def post(self):
@@ -221,7 +221,7 @@ class GetBeacon(Resource):
                 "message_detail"  : str(result[0][1]).lower()
             }
 
-@Beacon.route('/BEACON-SELECT-ALL')
+@Beacon.route('/beaconSelectAll')
 class GetBeaconAll(Resource):
 
     def post(self):
@@ -251,7 +251,7 @@ class GetBeaconAll(Resource):
             return {
                 "result"          : "02",
                 "message"         : "success",
-                "message_detail"  : str( result[0][1]).lower()
+                "message_detail"  : str(result[0][1]).lower()
             }
         else:
             return {
@@ -259,7 +259,7 @@ class GetBeaconAll(Resource):
                 "message"         : "fail"
             }
 
-@Beacon.route('/BEACON-UPDATE')
+@Beacon.route('/beaconUpdate')
 class UpdateBeacon(Resource):
     def post(self):
         """비콘 Floor 정보 업데이트 (성공: 01, Data 없음: 02, 실패: 99)"""
@@ -299,7 +299,7 @@ class UpdateBeacon(Resource):
                 "message"         : "fail"
             }
 
-@Beacon.route('/BEACON-HISTORY')
+@Beacon.route('/beaconCall')
 class PutBeaconHistory(Resource):
 
     def post(self):
@@ -308,19 +308,24 @@ class PutBeaconHistory(Resource):
         # POST 방식으로 수신
         user_id = request.json.get('user_id')
         beacon_id = request.json.get('beacon_id')
-        activity_code = request.json.get('activity_code')
-        point_code = request.json.get('point_code')
-        building_code = request.json.get('building_code')
+        distance_str = request.json.get('distance')
+
+        # DB단에서 구현
+        # activity_code = request.json.get('activity_code')
+        # point_code = request.json.get('point_code')
+        # building_code = request.json.get('building_code')
 
         user_id_str = str(user_id)
         beacon_id_str = str(beacon_id)
-        activity_code_str = str(activity_code)
-        point_code_str = str(point_code)
-        building_code_str = str(building_code)
+        
+        # DB단에서 구현
+        # activity_code_str = str(activity_code)
+        # point_code_str = str(point_code)
+        # building_code_str = str(building_code)
 
         cursor = conn.cursor()
 
-        params = (user_id_str, beacon_id_str, activity_code_str, point_code_str, building_code_str)
+        params = (user_id_str, beacon_id_str, distance_str)
         cursor.callproc('SET_BEACON_HISTORY_INFO', params)
 
         result = [row for row in cursor]
@@ -334,12 +339,56 @@ class PutBeaconHistory(Resource):
                 "result"          : result[0][0],
                 "message"         : "success",
                 "message_detail"  : str(result[0][1]).lower(),
-                "max_floor"  : str(result[0][2]).lower(),
-                "sum_point"  : str(result[0][3]).lower()}
+                "max_floor"       : str(result[0][2]).lower(),
+                "sum_point"       : str(result[0][3]).lower()}
         # 등록 실패 - 기타
         else:
             return {
                 "result"          : result[0][0],
                 "message"         : "fail",
                 "message_detail"  : str( result[0][1]).lower()
+            }
+
+
+# 3. 포인트 관련 API
+# └ pointSelect   : 포인트 조회
+@Beacon.route('/pointSelect')
+class GetPoint(Resource):
+
+    def post(self):
+        """포인트 조회 (성공: 01, Data 없음: 02, 실패: 99)"""
+
+        # # POST 방식으로 수신
+        user_id = request.json.get('user_id')
+        season_cd = request.json.get('season_cd')
+
+        user_id_str = str(user_id)
+        season_cd_str = str(season_cd)
+
+        cursor = conn.cursor()
+
+        params = (user_id_str, season_cd_str)
+        cursor.callproc('GET_POINT_INFO', params)
+
+        result = [row for row in cursor]
+
+        cursor.close()
+
+        if  result[0][0] == '01' :
+            return {
+                "result"          : "01",
+                "message"         : "SUCCESS",
+                "result_data"     : result
+            }
+        elif result[0][0] == '02' :
+            return {
+                "result"          : "02",
+                "message"         : "success",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        else:
+            return {
+                "result"          : "99",
+                "message"         : "fail",
+                "message_detail"  : str(result[0][1]).lower()
             }

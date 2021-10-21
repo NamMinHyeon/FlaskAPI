@@ -2,6 +2,7 @@ from flask import request
 from flask_restx import Resource, Api, Namespace
 from multiprocessing import Process, Queue, Lock
 import multiprocessing
+import json
 
 # Flask(Micro Web Framework) : 미니멀리즘
 #  → API Server → 스케쥴링을 통한 자원 유연성 확보
@@ -378,7 +379,8 @@ class GetPoint(Resource):
             return {
                 "result"          : "01",
                 "message"         : "SUCCESS",
-                "result_data"     : result
+                "season_code"     : str(result[0][1]).lower(),
+                "result_data"     : json.loads(str(result[0][2]).lower())
             }
         elif result[0][0] == '02' :
             return {

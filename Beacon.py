@@ -31,8 +31,8 @@ conn =  pymssql.connect(server , username, password, database)
 
 
 # 1. 사용자 관련 API
-# └ LOGIN       : 사용자 로그인
-# └ REGISTER    : 사용자 등록
+# └ login       : 사용자 로그인
+# └ register    : 사용자 등록
 @Beacon.route('/login')
 class GetUser(Resource):
 

@@ -246,7 +246,7 @@ class GetBeaconAll(Resource):
             return {
                 "result"          : "01",
                 "message"         : "success",
-                "result_data"     : result
+                "result_data"     : json.loads(str(result[0][1]).lower())
             }
         elif result[0][0] == '02' :
             return {

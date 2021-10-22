@@ -74,7 +74,9 @@ class GetUser(Resource):
                 "user_name"       : result[0][0],
                 "mail_addr"       : result[0][1],
                 "building_code"   : result[0][2],
-                "sum_point"       : result[0][3]
+                "sum_point"       : result[0][3],
+                "floor_up"       : result[0][4],
+                "floor_down"       : result[0][5]
             }
 
 @Beacon.route('/register')

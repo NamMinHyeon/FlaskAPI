@@ -2,33 +2,41 @@ from flask import request
 from flask_restx import Resource, Api, Namespace
 from multiprocessing import Process, Queue, Lock
 import multiprocessing
-import json
+import os, json
 
 # Flask(Micro Web Framework) : 미니멀리즘
 #  → API Server → 스케쥴링을 통한 자원 유연성 확보
 
-#DBMS 연동부
+#〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
 import pymssql
+
+BASE_DIR = "./"
+secret_file = os.path.join(BASE_DIR, 'secrets.json')
+
+with open(secret_file) as f:
+    secrets = json.loads(f.read())
+ 
+def get_secret(setting, secrets=secrets):
+    try:
+        return secrets[setting]
+    except KeyError:
+        err_msg = f"set the {setting} enviroment variable"
+        raise print(err_msg)
+        
+db_host = get_secret("DB_HOST")
+db_user = get_secret("DB_USER")
+db_pass = get_secret("DB_PASS")
+db_port = get_secret("DB_PORT")
+db_name = get_secret("DB_NAME")
+ 
+conn =  pymssql.connect(db_host , db_user, db_pass, db_name)
+#〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
+
 
 Beacon = Namespace(
     name="Beacon",
     description="Beacon 호출 API",
 )
-
-# 1. Local
-# server = '192.168.35.100'
-# database = 'HSTEP'
-# username = 'sa'
-# password = 'Qwer!234'
-
-# 2. AWS
-server = 'hae.ctgaojyz5tpu.ap-northeast-2.rds.amazonaws.com'
-database = 'HSTEPUP'
-username = 'sa'
-password = 'Qwer!234'
-
-conn =  pymssql.connect(server , username, password, database)
-
 
 # 1. 사용자 관련 API
 # └ login       : 사용자 로그인
@@ -352,14 +360,15 @@ class PutBeaconHistory(Resource):
 
 
 # 3. 포인트 관련 API
-# └ pointSelect   : 포인트 조회
+# └ pointSelect     : 포인트 조회
+# └ pointSeasonRank : 포인트 시즌 랭킹 조회
 @Beacon.route('/pointSelect')
 class GetPoint(Resource):
 
     def post(self):
         """포인트 조회 (성공: 01, Data 없음: 02, 실패: 99)"""
 
-        # # POST 방식으로 수신
+        # POST 방식으로 수신
         user_id = request.json.get('user_id')
         season_cd = request.json.get('season_cd')
 
@@ -370,6 +379,47 @@ class GetPoint(Resource):
 
         params = (user_id_str, season_cd_str)
         cursor.callproc('GET_POINT_INFO', params)
+
+        result = [row for row in cursor]
+
+        cursor.close()
+
+        if  result[0][0] == '01' :
+            return {
+                "result"          : "01",
+                "message"         : "SUCCESS",
+                "season_code"     : str(result[0][1]).lower(),
+                "result_data"     : json.loads(str(result[0][2]).lower())
+            }
+        elif result[0][0] == '02' :
+            return {
+                "result"          : "02",
+                "message"         : "success",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        else:
+            return {
+                "result"          : "99",
+                "message"         : "fail",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+
+
+@Beacon.route('/pointSeasonRank')
+class GetPointRank(Resource):
+
+    def post(self):
+        """포인트 시즌 랭킹 조회 (성공: 01, Data 없음: 02, 실패: 99)"""
+
+        # POST 방식으로 수신
+        season_cd = request.json.get('season_cd')
+
+        season_cd_str = str(season_cd)
+
+        cursor = conn.cursor()
+
+        params = (season_cd_str, )
+        cursor.callproc('GET_POINT_SEASON_RANK', params)
 
         result = [row for row in cursor]
 

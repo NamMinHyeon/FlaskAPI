@@ -64,19 +64,24 @@ class GetUser(Resource):
         # 로그인 실패: 99 구현 필요
         if len(result) == 0 :
             return {
+                "user_name"       : user_name_str,
+                "user_id"         : user_id_str,
                 "result"          : "02",
                 "message"         : "success"
             }
         else:
             return {
+                "user_name"       : user_name_str,
+                "user_id"         : user_id_str,
                 "result"          : "01",
                 "message"         : "success",
                 "user_name"       : result[0][0],
                 "mail_addr"       : result[0][1],
                 "building_code"   : result[0][2],
                 "sum_point"       : result[0][3],
-                "floor_up"       : result[0][4],
-                "floor_down"       : result[0][5]
+                "floor_up"        : result[0][4],
+                "floor_down"      : result[0][5],
+                "calorie"         : result[0][6]
             }
 
 @Beacon.route('/register')
@@ -112,6 +117,10 @@ class PutUser(Resource):
         # 등록 성공
         if result[0][0] == '01' :
             return {
+                "user_name"       : user_name_str,
+                "user_id"         : user_id_str,
+                "company_code"    : company_code_str,
+                "building_code"   : building_code_str,
                 "result"          : result[0][0],
                 "message"         : "success",
                 "message_detail"  : str(result[0][1]).lower()
@@ -119,6 +128,10 @@ class PutUser(Resource):
         # 등록 실패 - 중복
         elif result[0][0] == '99':
             return {
+                "user_name"       : user_name_str,
+                "user_id"         : user_id_str,
+                "company_code"    : company_code_str,
+                "building_code"   : building_code_str,
                 "result"          : result[0][0],
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()
@@ -126,6 +139,10 @@ class PutUser(Resource):
         # 등록 실패 - 기타
         else:
             return {
+                "user_name"       : user_name_str,
+                "user_id"         : user_id_str,
+                "company_code"    : company_code_str,
+                "building_code"   : building_code_str,
                 "result"          : result[0][0],
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()
@@ -319,7 +336,7 @@ class PutBeaconHistory(Resource):
         # POST 방식으로 수신
         user_id = request.json.get('user_id')
         beacon_id = request.json.get('beacon_id')
-        distance_str = request.json.get('distance')
+        distance = request.json.get('distance')
 
         # DB단에서 구현
         # activity_code = request.json.get('activity_code')
@@ -328,6 +345,7 @@ class PutBeaconHistory(Resource):
 
         user_id_str = str(user_id)
         beacon_id_str = str(beacon_id)
+        distance_str = str(distance)
         
         # DB단에서 구현
         # activity_code_str = str(activity_code)
@@ -347,6 +365,9 @@ class PutBeaconHistory(Resource):
         # 등록 성공
         if result[0][0] == '01' :
             return {
+                "user_id"         : user_id_str,
+                "beacon_id"       : beacon_id_str,
+                "distance"        : distance_str,
                 "result"          : result[0][0],
                 "message"         : "success",
                 "message_detail"  : str(result[0][1]).lower(),
@@ -355,9 +376,12 @@ class PutBeaconHistory(Resource):
         # 등록 실패 - 기타
         else:
             return {
+                "user_id"         : user_id_str,
+                "beacon_id"       : beacon_id_str,
+                "distance"        : distance_str,
                 "result"          : result[0][0],
                 "message"         : "fail",
-                "message_detail"  : str( result[0][1]).lower()
+                "message_detail"  : str(result[0][1]).lower()
             }
 
 
@@ -388,6 +412,8 @@ class GetPoint(Resource):
 
         if  result[0][0] == '01' :
             return {
+                "user_id"         : user_id_str,
+                "season_cd"       : season_cd_str,
                 "result"          : "01",
                 "message"         : "SUCCESS",
                 "season_code"     : str(result[0][1]).lower(),
@@ -395,12 +421,16 @@ class GetPoint(Resource):
             }
         elif result[0][0] == '02' :
             return {
+                "user_id"         : user_id_str,
+                "season_cd"       : season_cd_str,
                 "result"          : "02",
                 "message"         : "success",
                 "message_detail"  : str(result[0][1]).lower()
             }
         else:
             return {
+                "user_id"         : user_id_str,
+                "season_cd"       : season_cd_str,
                 "result"          : "99",
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()
@@ -429,6 +459,7 @@ class GetPointRank(Resource):
 
         if  result[0][0] == '01' :
             return {
+                "season_cd"       : season_cd_str,
                 "result"          : "01",
                 "message"         : "SUCCESS",
                 "season_code"     : str(result[0][1]).lower(),
@@ -436,12 +467,14 @@ class GetPointRank(Resource):
             }
         elif result[0][0] == '02' :
             return {
+                "season_cd"       : season_cd_str,
                 "result"          : "02",
                 "message"         : "success",
                 "message_detail"  : str(result[0][1]).lower()
             }
         else:
             return {
+                "season_cd"       : season_cd_str,
                 "result"          : "99",
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()

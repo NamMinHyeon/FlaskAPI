@@ -436,10 +436,9 @@ class GetPoint(Resource):
                 "message_detail"  : str(result[0][1]).lower()
             }
 
-
 @Beacon.route('/pointSeasonRank')
 class GetPointRank(Resource):
-
+    
     def post(self):
         """포인트 시즌 랭킹 조회 (성공: 01, Data 없음: 02, 실패: 99)"""
 
@@ -479,3 +478,61 @@ class GetPointRank(Resource):
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()
             }
+
+
+# 4. 활동(Activity) 관련 API
+# └ activitySelect     : 활동이력 조회
+# └ activitySelect2     : 활동이력 조회
+@Beacon.route('/activitySelect')
+class GetActivity(Resource):
+    
+    def post(self):
+        """활동 이력 조회 (성공: 01, Data 없음: 02, 실패: 99)"""
+
+        # POST 방식으로 수신
+        user_id = request.json.get('user_id')
+        type = request.json.get('type')
+        season_cd = request.json.get('season_cd')
+
+        user_id_str = str(user_id)
+        type_str = str(type)
+        season_cd_str = str(season_cd)
+
+        cursor = conn.cursor()
+
+        params = (user_id, type, season_cd)
+        cursor.callproc('GET_USER_ACTIVITY_SEASON', params)
+
+        result = [row for row in cursor]
+
+        cursor.close()
+
+        if  result[0][0] == '01' :
+            return {
+                "season_cd"       : season_cd_str,
+                "result"          : "01",
+                "message"         : "SUCCESS",
+                "season_code"     : str(result[0][1]).lower(),
+                "result_data"     : json.loads(str(result[0][2]).lower())
+            }
+        elif result[0][0] == '02' :
+            return {
+                "season_cd"       : season_cd_str,
+                "result"          : "02",
+                "message"         : "success",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        else:
+            return {
+                "season_cd"       : season_cd_str,
+                "result"          : "99",
+                "message"         : "fail",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+
+
+@Beacon.route('/activitySelect2')
+class GetActivity2(Resource):
+
+    def post(self):
+        """활동 이력 조회 (성공: 01, Data 없음: 02, 실패: 99)"""

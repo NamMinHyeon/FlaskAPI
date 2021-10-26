@@ -481,8 +481,8 @@ class GetPointRank(Resource):
 
 
 # 4. 활동(Activity) 관련 API
-# └ activitySelect     : 활동이력 조회
-# └ activitySelect2     : 활동이력 조회
+# └ activitySelect      : 활동이력 조회
+# └ activitySelect2     : 활동이력 조회 2
 @Beacon.route('/activitySelect')
 class GetActivity(Resource):
     
@@ -500,7 +500,7 @@ class GetActivity(Resource):
 
         cursor = conn.cursor()
 
-        params = (user_id, type, season_cd)
+        params = (user_id_str, type_str, season_cd_str)
         cursor.callproc('GET_USER_ACTIVITY_SEASON', params)
 
         result = [row for row in cursor]
@@ -509,6 +509,8 @@ class GetActivity(Resource):
 
         if  result[0][0] == '01' :
             return {
+                "user_id"         : user_id_str,
+                "type"            : type_str,
                 "season_cd"       : season_cd_str,
                 "result"          : "01",
                 "message"         : "SUCCESS",
@@ -517,6 +519,8 @@ class GetActivity(Resource):
             }
         elif result[0][0] == '02' :
             return {
+                "user_id"         : user_id_str,
+                "type"            : type_str,
                 "season_cd"       : season_cd_str,
                 "result"          : "02",
                 "message"         : "success",
@@ -524,6 +528,8 @@ class GetActivity(Resource):
             }
         else:
             return {
+                "user_id"         : user_id_str,
+                "type"            : type_str,
                 "season_cd"       : season_cd_str,
                 "result"          : "99",
                 "message"         : "fail",
@@ -536,3 +542,45 @@ class GetActivity2(Resource):
 
     def post(self):
         """활동 이력 조회 (성공: 01, Data 없음: 02, 실패: 99)"""
+
+        # POST 방식으로 수신
+        user_id = request.json.get('user_id')
+        season_cd = request.json.get('season_cd')
+
+        user_id_str = str(user_id)
+        season_cd_str = str(season_cd)
+
+        cursor = conn.cursor()
+
+        params = (user_id, season_cd)
+        cursor.callproc('GET_USER_ACTIVITY_SEASON_2', params)
+
+        result = [row for row in cursor]
+
+        cursor.close()
+
+        if  result[0][0] == '01' :
+            return {
+                "user_id"         : user_id_str,
+                "season_cd"       : season_cd_str,
+                "result"          : "01",
+                "message"         : "SUCCESS",
+                "season_code"     : str(result[0][1]).lower(),
+                "result_data"     : json.loads(str(result[0][2]).lower())
+            }
+        elif result[0][0] == '02' :
+            return {
+                "user_id"         : user_id_str,
+                "season_cd"       : season_cd_str,
+                "result"          : "02",
+                "message"         : "success",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        else:
+            return {
+                "user_id"         : user_id_str,
+                "season_cd"       : season_cd_str,
+                "result"          : "99",
+                "message"         : "fail",
+                "message_detail"  : str(result[0][1]).lower()
+            }

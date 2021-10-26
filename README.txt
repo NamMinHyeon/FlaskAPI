@@ -21,3 +21,6 @@
 
  4. Source File path
  - /home/ubuntu/project/Flask
+
+5. Packages
+ - pip install -r requirements.txt

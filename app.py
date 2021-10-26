@@ -20,4 +20,3 @@ api.add_namespace(Beacon, '/Beacon')   #외부 구현 클래스 import 후 특�
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=80)
-    # app.run(debug=True, host='52.78.173.135', port=80)

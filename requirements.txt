@@ -1,0 +1,3 @@
+Flask
+Flask-Admin
+Flask-Security>=1.7.5

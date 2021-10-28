@@ -46,8 +46,8 @@ api.add_namespace(Beacon, '/Beacon')   #외부 구현 클래스 import 후 특�
 
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 # 비콘 테이블 모델 정의 : 테이블명 동일하게
+# 수정을 위해 SEQ (고유값) 일괄 추가 및 Unique값으로 활용하기
 class beacon_info(db.Model):
-    # 수정을 위해 SEQ (고유값) 추가하여 키값으로 활용하기
     seq = db.Column(db.String(100), primary_key=True)
     beacon_id = db.Column(db.String(100), nullable=False)
     major_id = db.Column(db.String(255), nullable=False)
@@ -55,9 +55,7 @@ class beacon_info(db.Model):
     building_code = db.Column(db.String(255), nullable=False)
     floor = db.Column(db.Integer(), nullable=False)
 
-
 class season_code(db.Model):
-    # 수정을 위해 SEQ (고유값) 추가하여 키값으로 활용하기
     seq = db.Column(db.Integer(), primary_key=True)
     season_code = db.Column(db.String(100), nullable=False)
     season_name = db.Column(db.String(255), nullable=False)
@@ -65,7 +63,31 @@ class season_code(db.Model):
     end_dt = db.Column(db.String(100), nullable=False)
     active_yn = db.Column(db.String(1), nullable=False)
 
+class building_code(db.Model):
+    seq = db.Column(db.Integer(), primary_key=True)
+    building_code = db.Column(db.String(100), nullable=False)
+    building_name = db.Column(db.String(255), nullable=False)
 
+class company_code(db.Model):
+    seq = db.Column(db.Integer(), primary_key=True)
+    company_code = db.Column(db.String(100), nullable=False)
+    company_name = db.Column(db.String(255), nullable=False)
+
+class point_code(db.Model):
+    seq = db.Column(db.Integer(), primary_key=True)
+    point_code = db.Column(db.String(100), nullable=False)
+    point_name = db.Column(db.String(255), nullable=False)
+
+class user_info(db.Model):
+    seq = db.Column(db.Integer(), primary_key=True)
+    company_code = db.Column(db.String(100), nullable=False)
+    user_id = db.Column(db.String(100), nullable=False)
+    user_name = db.Column(db.String(255), nullable=False)
+    building_code = db.Column(db.String(100), nullable=False)
+    mail_addr = db.Column(db.String(255), nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    crtn_dt = db.Column(db.String(100))
+    mody_dt = db.Column(db.String(100))
 
 
 # Define models
@@ -158,12 +180,30 @@ class BeaconView(MyModelView):
     # column_display_actions = True
 
 class SeasonView(MyModelView):
-    # column_display_pk = True
     column_editable_list = ('season_code', 'season_name', 'start_dt', 'end_dt', 'active_yn')
     column_searchable_list = column_editable_list
     column_export_list  = column_editable_list
-    # column_filters = column_editable_list
-    # column_display_actions = True
+
+class BuildingView(MyModelView):
+    column_editable_list = ('building_code', 'building_name')
+    column_searchable_list = column_editable_list
+    column_export_list  = column_editable_list
+    
+class CompanyView(MyModelView):
+    column_editable_list = ('company_code', 'company_name')
+    column_searchable_list = column_editable_list
+    column_export_list  = column_editable_list
+
+class PointView(MyModelView):
+    column_editable_list = ('point_code', 'point_name')
+    column_searchable_list = column_editable_list
+    column_export_list  = column_editable_list
+
+class UserView(MyModelView):
+    column_editable_list = ('company_code', 'user_id', 'user_name', 'building_code', 'mail_addr', 'password')
+    column_searchable_list = ('company_code', 'user_id', 'user_name', 'building_code', 'mail_addr', 'password', 'crtn_dt', 'mody_dt')
+    column_export_list  = ('company_code', 'user_id', 'user_name', 'building_code', 'mail_addr', 'password', 'crtn_dt', 'mody_dt')
+
 
 
 class CustomView(BaseView):
@@ -192,8 +232,12 @@ admin = flask_admin.Admin(
 
 # 비콘 관련 모델 뷰 정의
 # admin.add_view("모델 뷰 명칭"("모델 뷰", db.session, ))
-admin.add_view(BeaconView(beacon_info, db.session, menu_icon_type='fa', menu_icon_value='fa-users', name="Beacons"))
+admin.add_view(BeaconView(beacon_info, db.session, menu_icon_type='fa', menu_icon_value='fa-server', name="Beacons"))
 admin.add_view(SeasonView(season_code, db.session, menu_icon_type='fa', menu_icon_value='fa-server', name="Seasons"))
+admin.add_view(BuildingView(building_code, db.session, menu_icon_type='fa', menu_icon_value='fa-server', name="Buildings"))
+admin.add_view(CompanyView(company_code, db.session, menu_icon_type='fa', menu_icon_value='fa-server', name="Companys"))
+admin.add_view(PointView(point_code, db.session, menu_icon_type='fa', menu_icon_value='fa-connectdevelop', name="Points"))
+admin.add_view(UserView(user_info, db.session, menu_icon_type='fa', menu_icon_value='fa-users', name="Users"))
 
 # define a context processor for merging flask-admin's template context into the
 # flask-security views.

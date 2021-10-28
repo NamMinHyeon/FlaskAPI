@@ -514,18 +514,17 @@ class GetActivity(Resource):
                 "season_cd"       : season_cd_str,
                 "result"          : "01",
                 "message"         : "SUCCESS",
-                "season_code"     : str(result[0][1]).lower(),
-                "result_data"     : json.loads(str(result[0][2]).lower())
+                "result_data"     : json.loads(str(result[0][1]).lower())
             }
-        elif result[0][0] == '02' :
-            return {
-                "user_id"         : user_id_str,
-                "type"            : type_str,
-                "season_cd"       : season_cd_str,
-                "result"          : "02",
-                "message"         : "success",
-                "message_detail"  : str(result[0][1]).lower()
-            }
+        # elif result[0][0] == '02' :
+        #     return {
+        #         "user_id"         : user_id_str,
+        #         "type"            : type_str,
+        #         "season_cd"       : season_cd_str,
+        #         "result"          : "02",
+        #         "message"         : "success",
+        #         "message_detail"  : str(result[0][1]).lower()
+        #     }
         else:
             return {
                 "user_id"         : user_id_str,

@@ -24,3 +24,6 @@
 
 5. Packages
  - pip install -r requirements.txt
+
+ 99. ETC
+ - Flask-admin : /usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/session.py - Modified

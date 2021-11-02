@@ -255,15 +255,9 @@ class GetBeaconAll(Resource):
     def post(self):
         """비콘 전체 호출 (성공: 01, Data 없음: 02, 실패: 99)"""
 
-        # # POST 방식으로 수신
-        beacon_id = request.json.get('beacon_id')
-        beacon_id_str = str(beacon_id)
-
+        # POST 방식 및 요청값 없음
         cursor = conn.cursor()
-
-        # Parameter 1개의 경우 아래처럼 셋팅
-        params = (beacon_id_str, )
-        cursor.callproc('GET_BEACON_INFO_ALL', params)
+        cursor.callproc('GET_BEACON_INFO_ALL')
 
         result = [row for row in cursor]
 
@@ -416,8 +410,7 @@ class GetPoint(Resource):
                 "season_cd"       : season_cd_str,
                 "result"          : "01",
                 "message"         : "SUCCESS",
-                "season_code"     : str(result[0][1]).lower(),
-                "result_data"     : json.loads(str(result[0][2]).lower())
+                "result_data"     : json.loads(str(result[0][1]).lower())
             }
         elif result[0][0] == '02' :
             return {
@@ -461,8 +454,7 @@ class GetPointRank(Resource):
                 "season_cd"       : season_cd_str,
                 "result"          : "01",
                 "message"         : "SUCCESS",
-                "season_code"     : str(result[0][1]).lower(),
-                "result_data"     : json.loads(str(result[0][2]).lower())
+                "result_data"     : json.loads(str(result[0][1]).lower())
             }
         elif result[0][0] == '02' :
             return {
@@ -482,7 +474,7 @@ class GetPointRank(Resource):
 
 # 4. 활동(Activity) 관련 API
 # └ activitySelect      : 활동이력 조회
-# └ activitySelect2     : 활동이력 조회 2
+# └ activitySelect2     : 활동이력 조회 2 (미완료)
 @Beacon.route('/activitySelect')
 class GetActivity(Resource):
     
@@ -535,7 +527,6 @@ class GetActivity(Resource):
                 "message_detail"  : str(result[0][1]).lower()
             }
 
-
 @Beacon.route('/activitySelect2')
 class GetActivity2(Resource):
 
@@ -582,4 +573,39 @@ class GetActivity2(Resource):
                 "result"          : "99",
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()
+            }
+
+
+# 5. 시즌(Season) 관련 API
+# └ seasonSelect      : 시즌 정보 조회
+@Beacon.route('/seasonSelect')
+class GetSeason(Resource):
+
+    def post(self):
+        """시즌 전체 호출 (성공: 01, Data 없음: 02, 실패: 99)"""
+
+        # POST 방식 및 요청값 없음
+        cursor = conn.cursor()
+        cursor.callproc('GET_SEASON_INFO_ALL')
+
+        result = [row for row in cursor]
+
+        cursor.close()
+
+        if  result[0][0] == '01' :
+            return {
+                "result"          : "01",
+                "message"         : "success",
+                "result_data"     : json.loads(str(result[0][1]).lower())
+            }
+        elif result[0][0] == '02' :
+            return {
+                "result"          : "02",
+                "message"         : "success",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        else:
+            return {
+                "result"          : "99",
+                "message"         : "fail"
             }

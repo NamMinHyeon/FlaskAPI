@@ -7,7 +7,7 @@ import os, json
 # Flask(Micro Web Framework) : 미니멀리즘
 #  → API Server → 스케쥴링을 통한 자원 유연성 확보
 
-#〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓 
+#〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓  
 import pymssql
 
 BASE_DIR = "./"

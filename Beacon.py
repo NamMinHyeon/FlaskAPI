@@ -402,6 +402,7 @@ class GetPoint(Resource):
 
         result = [row for row in cursor]
 
+
         cursor.close()
 
         if  result[0][0] == '01' :

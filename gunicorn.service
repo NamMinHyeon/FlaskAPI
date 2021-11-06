@@ -1,0 +1,18 @@
+[Unit]
+Description=Gunicorn daemon
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/project/Flask
+EnvironmentFile=/home/ubuntu/project/Flask/gunicorn.env
+ExecStart=/usr/local/bin/gunicorn \
+        --workers 2 \
+        --bind unix:/tmp/gunicorn.sock \
+	--access-logfile access.log \
+	--error-logfile error.log \
+        wsgi:app
+
+[Install]
+WantedBy=multi-user.target

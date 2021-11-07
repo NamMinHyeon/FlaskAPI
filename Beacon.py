@@ -4,6 +4,9 @@ from multiprocessing import Process, Queue, Lock
 import multiprocessing
 import os, json
 
+# log.py 참조
+import log 
+
 # Flask(Micro Web Framework) : 미니멀리즘
 #  → API Server → 스케쥴링을 통한 자원 유연성 확보
 
@@ -439,6 +442,8 @@ class GetPointRank(Resource):
     def post(self):
         """포인트 시즌 랭킹 조회 (성공: 01, Data 없음: 02, 실패: 99)"""
 
+        log.log(request, "TEST")
+        
         # POST 방식으로 수신
         season_cd = request.json.get('season_cd')
 

@@ -4,6 +4,7 @@ from multiprocessing import Process, Queue, Lock
 import multiprocessing
 import os, json
 
+<<<<<<< HEAD
 # log.py 참조
 import log 
 
@@ -11,6 +12,12 @@ import log
 #  → API Server → 스케쥴링을 통한 자원 유연성 확보
 
 #〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓  
+=======
+# Flask(Micro Web Framework) : 미니멀리즘
+#  → API Server → 스케쥴링을 통한 자원 유연성 확보
+
+#〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
 import pymssql
 
 BASE_DIR = "./"
@@ -41,6 +48,7 @@ Beacon = Namespace(
     description="Beacon 호출 API",
 )
 
+<<<<<<< HEAD
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 # @Beacon.before_first_request
@@ -64,6 +72,8 @@ Beacon = Namespace(
 #     # 라우팅 코드 직후에
 
 
+=======
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
 # 1. 사용자 관련 API
 # └ login       : 사용자 로그인
 # └ register    : 사용자 등록
@@ -423,19 +433,29 @@ class GetPoint(Resource):
 
         cursor = conn.cursor()
 
+<<<<<<< HEAD
         params = (user_id_str, season_cd_str) 
+=======
+        params = (user_id_str, season_cd_str)
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
         cursor.callproc('GET_POINT_INFO', params)
 
         result = [row for row in cursor]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
         cursor.close()
 
         if  result[0][0] == '01' :
             return {
                 "user_id"         : user_id_str,
                 "season_cd"       : season_cd_str,
+<<<<<<< HEAD
                 "season_name"     : str(result[0][2]).lower(),
+=======
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
                 "result"          : "01",
                 "message"         : "SUCCESS",
                 "result_data"     : json.loads(str(result[0][1]).lower())
@@ -444,7 +464,10 @@ class GetPoint(Resource):
             return {
                 "user_id"         : user_id_str,
                 "season_cd"       : season_cd_str,
+<<<<<<< HEAD
                 "season_name"     : str(result[0][2]).lower(),
+=======
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
                 "result"          : "02",
                 "message"         : "success",
                 "message_detail"  : str(result[0][1]).lower()
@@ -453,7 +476,10 @@ class GetPoint(Resource):
             return {
                 "user_id"         : user_id_str,
                 "season_cd"       : season_cd_str,
+<<<<<<< HEAD
                 "season_name"     : str(result[0][2]).lower(),
+=======
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
                 "result"          : "99",
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()

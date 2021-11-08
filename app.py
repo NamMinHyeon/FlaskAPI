@@ -15,12 +15,15 @@ from flask_admin import helpers as admin_helpers
 from flask_admin import BaseView, expose
 from wtforms import PasswordField
 
+<<<<<<< HEAD
 # log.py 참조
 import log 
 
 # 디버깅 모드 (중단점)
 import pdb
 
+=======
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
 from Beacon import Beacon
 # from "페이지명" import "namespace명"
 
@@ -256,6 +259,7 @@ def security_context_processor():
         get_url=url_for
     )
 
+<<<<<<< HEAD
 @app.errorhandler(404)
 def page_not_found(error):
     app.logger.error('Page_not_found Access')
@@ -295,4 +299,8 @@ if __name__ == "__main__":
     # app.logger.debug("debug test") 
     # app.logger.error("error test")
 
+=======
+# ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+if __name__ == "__main__":
+>>>>>>> 42ed4eea1521f3a21d3dcfe4de0ec72755976e89
     app.run(debug=True, host='0.0.0.0', port=80)

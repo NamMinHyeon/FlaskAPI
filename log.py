@@ -35,15 +35,15 @@ def logInput(request, message):
     # request.environ.get('HTTP_X_REAL_IP', request.remote_addr)   
     # request.environ['REMOTE_ADDR']
     # request.remote_addr
-    log_message = "{0} / {1} / {2} / {3}".format(message,  request.environ.get('HTTP_X_REAL_IP', request.remote_addr),  request.path, str(request.json))    
+    log_message = "{0} ┃ {1} ┃ {2} ┃ {3}".format(message,  request.environ.get('HTTP_X_REAL_IP', request.remote_addr),  request.path, str(request.json))    
     Logger.info(log_message)
 
 def logOutput(response, message):
-    log_message = "{0} / {1}".format(message, str(response))
+    log_message = "{0} ┃ {1}".format(message, str(response))
     Logger.info(log_message)
 
 def error_log(request, error_code, error_message):
-    log_message = "{0} / {1} / {2}".format(str(request), error_code, error_message)
+    log_message = "{0} ┃ {1} ┃ {2}".format(str(request), error_code, error_message)
     Logger.info(log_message)
 
 def get_log_date():

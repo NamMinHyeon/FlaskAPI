@@ -15,6 +15,12 @@ from flask_admin import helpers as admin_helpers
 from flask_admin import BaseView, expose
 from wtforms import PasswordField
 
+# log.py 참조
+import log 
+
+# 디버깅 모드 (중단점)
+import pdb
+
 from Beacon import Beacon
 # from "페이지명" import "namespace명"
 
@@ -250,6 +256,43 @@ def security_context_processor():
         get_url=url_for
     )
 
+@app.errorhandler(404)
+def page_not_found(error):
+    app.logger.error('Page_not_found Access')
+    return "There is no web page. Please enter the URL correctly.", 404
+ 
+@app.before_first_request
+def before_first_request():
+    print("Flask API Open")
+    # 즉 프린트문을 통해 어느 시점에서 첫요청이 일어나는지 확인
+ 
+ 
+@app.before_request
+def before_request():
+    # c - continue로 다음에 설정 된 중단점으로 바로 이동
+    # n - 다음 줄로 이동 함
+    # r - 현재 함수가 return 될 때까지 계속 실행
+    # l - 현재 라인을 포함하여 위 아래로 11줄의 코드를 출력함
+    # pdb.set_trace()
+    # print("HTTP 요청이 들어올 때마다 실행")
+    log.logIn(request.environ['REMOTE_ADDR'], request.path, request.json, "BEFORE_REQUEST")
+    # 라우팅 코드 직전에 실행
+ 
+ 
+@app.after_request
+def after_request(response):
+    # pdb.set_trace()
+    # print("HTTP 요청 처리가 끝나고 브라우저에 응답하기 전에 실행")
+    log.logOut(response, "AFTER_REQUEST")
+    return response
+    # 해당 요청이 발생하면 프린트문으로 확인하고, 응답 또한 보내줌.
+    # 라우팅 코드 직후에
+
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
+    
+    # app.logger.info("test") 
+    # app.logger.debug("debug test") 
+    # app.logger.error("error test")
+
     app.run(debug=True, host='0.0.0.0', port=80)

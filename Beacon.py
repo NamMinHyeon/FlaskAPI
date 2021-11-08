@@ -4,9 +4,6 @@ from multiprocessing import Process, Queue, Lock
 import multiprocessing
 import os, json
 
-# log.py 참조
-import log 
-
 # Flask(Micro Web Framework) : 미니멀리즘
 #  → API Server → 스케쥴링을 통한 자원 유연성 확보
 

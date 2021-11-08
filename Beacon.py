@@ -423,7 +423,7 @@ class GetPoint(Resource):
 
         cursor = conn.cursor()
 
-        params = (user_id_str, season_cd_str)
+        params = (user_id_str, season_cd_str) 
         cursor.callproc('GET_POINT_INFO', params)
 
         result = [row for row in cursor]

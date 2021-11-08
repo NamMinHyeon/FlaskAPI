@@ -3,8 +3,6 @@ import logging
 import datetime
 from pytz import timezone
 
-# https://jangseongwoo.github.io/logging/flask_logging/ 참고
-
 # DEBUG > INFO > WARNING > ERROR > Critical
 # DEBUG - 상세한 정보
 # INFO - 일반적인 정보
@@ -15,10 +13,11 @@ from pytz import timezone
 #log settings
 # %(asctimes)s : 로그 기록 시간
 # %(message)s : 입력 로그
-LogFormatter = logging.Formatter('%(asctime)s, %(message)s')
+
+LogFormatter = logging.Formatter('%(message)s')
 
 #handler settings
-LogHandler = handlers.TimedRotatingFileHandler(filename='logs/beacon.log', when='midnight', interval=1, encoding='utf-8', utc = True)
+LogHandler = handlers.TimedRotatingFileHandler(filename='logs/beacon.log', when='midnight', interval=1, encoding='utf-8', utc = 'kst')
 LogHandler.setFormatter(LogFormatter)
 # Example) beacon.log.20211231
 LogHandler.suffix = "%Y%m%d%"
@@ -35,20 +34,23 @@ def logInput(request, message):
     # request.environ.get('HTTP_X_REAL_IP', request.remote_addr)   
     # request.environ['REMOTE_ADDR']
     # request.remote_addr
-    log_message = "{0} ┃ {1} ┃ {2} ┃ {3}".format(message,  request.environ.get('HTTP_X_REAL_IP', request.remote_addr),  request.path, str(request.json))    
+    log_date = get_log_date()
+    log_message = "{0} ┃ {1} ┃ {2} ┃ {3} ┃ {4}".format(log_date, message,  request.environ.get('HTTP_X_REAL_IP', request.remote_addr),  request.path, str(request.json))    
     Logger.info(log_message)
 
 def logOutput(response, message):
-    log_message = "{0} ┃ {1}".format(message, str(response))
+    log_date = get_log_date()
+    log_message = "{0} ┃ {1} ┃ {2}".format(log_date, message, str(response))
     Logger.info(log_message)
 
 def error_log(request, error_code, error_message):
-    log_message = "{0} ┃ {1} ┃ {2}".format(str(request), error_code, error_message)
+    log_date = get_log_date()
+    log_message = "{0} ┃ {1} ┃ {2} ┃ {3}".format(log_date, str(request), error_code, error_message)
     Logger.info(log_message)
 
 def get_log_date():
     dt = datetime.datetime.now(timezone("Asia/Seoul"))
-    log_date = dt.strftime("%Y%m%d_%H:%M:%S")
+    log_date = (dt.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3])
     return log_date
 
 

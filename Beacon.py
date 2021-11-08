@@ -41,6 +41,29 @@ Beacon = Namespace(
     description="Beacon 호출 API",
 )
 
+# ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+# @Beacon.before_first_request
+# def before_first_request():
+#     print("flask 실행 후 첫 요청 때만 실행")
+#     # 즉 프린트문을 통해 어느 시점에서 첫요청이 일어나는지 확인
+ 
+ 
+# @Beacon.before_request
+# def before_request():
+#     print("HTTP 요청이 들어올 때마다 실행")
+#     # 즉 프린트문을 통해 어느 시점에서 첫요청이 일어나는지 확인 
+#     # 라우팅 코드 직전에 실행
+ 
+ 
+# @Beacon.after_request
+# def after_request(response):
+#     print("HTTP 요청 처리가 끝나고 브라우저에 응답하기 전에 실행")
+#     return response
+#     # 해당 요청이 발생하면 프린트문으로 확인하고, 응답 또한 보내줌.
+#     # 라우팅 코드 직후에
+
+
 # 1. 사용자 관련 API
 # └ login       : 사용자 로그인
 # └ register    : 사용자 등록
@@ -442,8 +465,6 @@ class GetPointRank(Resource):
     def post(self):
         """포인트 시즌 랭킹 조회 (성공: 01, Data 없음: 02, 실패: 99)"""
 
-        log.log(request, "TEST")
-        
         # POST 방식으로 수신
         season_cd = request.json.get('season_cd')
 

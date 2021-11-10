@@ -256,10 +256,10 @@ def security_context_processor():
         get_url=url_for
     )
 
-@app.errorhandler(404)
-def page_not_found(error):
-    app.logger.error('Page_not_found Access')
-    return "There is no web page. Please enter the URL correctly.", 404
+# @app.errorhandler(404)
+# def page_not_found(error):
+#     app.logger.error('Page_not_found Access')
+#     return "There is no web page. Please enter the URL correctly.", 404
  
 @app.before_first_request
 def before_first_request():

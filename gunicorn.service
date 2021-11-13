@@ -8,6 +8,7 @@ Group=ubuntu
 WorkingDirectory=/home/ubuntu/project/Flask
 EnvironmentFile=/home/ubuntu/project/Flask/gunicorn.env
 ExecStart=/usr/local/bin/gunicorn \
+	--timeout=300 \
         --workers 2 \
         --bind unix:/tmp/gunicorn.sock \
 	--access-logfile access.log \

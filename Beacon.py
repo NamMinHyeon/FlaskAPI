@@ -406,6 +406,7 @@ class PutBeaconHistory(Resource):
 # 3. 포인트 관련 API
 # └ pointSelect     : 포인트 조회
 # └ pointSeasonRank : 포인트 시즌 랭킹 조회
+# └ pointEnd        : 포인트 마감 처리
 @Beacon.route('/pointSelect')
 class GetPoint(Resource):
 
@@ -494,6 +495,62 @@ class GetPointRank(Resource):
         else:
             return {
                 "season_cd"       : season_cd_str,
+                "result"          : "99",
+                "message"         : "fail",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+
+@Beacon.route('/pointEnd')
+class SetPointEnd(Resource):
+
+    def post(self):
+        """포인트 마감 처리 (성공: 01, Data 없음: 02, 실패: 99)"""
+
+        # POST 방식으로 수신
+        user_id = request.json.get('user_id')
+        beacon_id = request.json.get('beacon_id')
+
+        user_id_str = str(user_id)
+        beacon_id_str = str(beacon_id)
+
+        cursor = conn.cursor()
+
+        params = (user_id_str, beacon_id_str) 
+        cursor.callproc('SET_POINT_END', params)
+
+        result = [row for row in cursor]
+
+
+        cursor.close()
+
+        if  result[0][0] == '01' :
+            return {
+                "user_id"         : user_id_str,
+                "beacon_id"       : beacon_id_str,
+                "result"          : "01",
+                "message"         : "SUCCESS",
+                "min_tm"          : str(result[0][1]).lower(),
+                "max_tm"          : str(result[0][2]).lower(),
+                "floor_start"     : str(result[0][3]).lower(),
+                "floor_end"       : str(result[0][4]).lower(),
+                "avg_tm"          : str(result[0][5]).lower(),
+                "sum_point"       : str(result[0][6]).lower(),
+                "calorie"         : str(result[0][7]).lower(),
+                "activity_tm"     : str(result[0][8]).lower(),
+                "floor_diff_sum"  : str(result[0][9]).lower()
+            }
+        elif result[0][0] == '02' :
+            return {
+                "user_id"         : user_id_str,
+                "beacon_id"       : beacon_id_str,
+                "result"          : "02",
+                "message"         : "success",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        else:
+            return {
+                "user_id"         : user_id_str,
+                "beacon_id"       : beacon_id_str,
                 "result"          : "99",
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()

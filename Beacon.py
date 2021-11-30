@@ -500,7 +500,7 @@ class GetPointRank(Resource):
                 "message_detail"  : str(result[0][1]).lower()
             }
 
-@Beacon.route('/pointEnd')
+@Beacon.route('/pointEnd') 
 class SetPointEnd(Resource):
 
     def post(self):
@@ -520,8 +520,11 @@ class SetPointEnd(Resource):
 
         result = [row for row in cursor]
 
-
+        # cursor 정상적으로 종료 필요
+        # Autocommit을 지원하지 않음
+        # commit 전에 result에 결과값 맵핑 필수
         cursor.close()
+        conn.commit()
 
         if  result[0][0] == '01' :
             return {

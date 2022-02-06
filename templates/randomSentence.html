@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+            $("#button_0").click(function(){
+                    $("#answer_0").show();
+                    $("#button_0").hide();
+            });
+            $("#button_1").click(function(){
+                    $("#answer_1").show();
+                    $("#button_1").hide();
+            });
+            $("#button_2").click(function(){
+                    $("#answer_2").show();
+                    $("#button_2").hide();
+            });
+            $("#button_3").click(function(){
+                    $("#answer_3").show();
+                    $("#button_3").hide();
+            });
+            $("#button_4").click(function(){
+                    $("#answer_4").show();
+                    $("#button_4").hide();
+            });
+    });
+
+</script>
+
+<body>
+    <p>1 : {{random_0}}</p> <button onclick="showAnswer()" id="button_0">Click</button> <p hidden id="answer_0">{{answer_0}}</p>
+    <p>2 : {{random_1}}</p> <button onclick="showAnswer()" id="button_1">Click</button> <p hidden id="answer_1">{{answer_1}}</p>
+    <p>3 : {{random_2}}</p> <button onclick="showAnswer()" id="button_2">Click</button> <p hidden id="answer_2">{{answer_2}}</p>
+    <p>4 : {{random_3}}</p> <button onclick="showAnswer()" id="button_3">Click</button> <p hidden id="answer_3">{{answer_3}}</p>
+    <p>5 : {{random_4}}</p> <button onclick="showAnswer()" id="button_4">Click</button> <p hidden id="answer_4">{{answer_4}}</p>
+    <p></p>
+    <button type="button" style="display:block; width:30%; text-align:center; font-size:1em; padding:2px;" onclick="history.go(0)">Refresh</button>
+</body>
+</html>

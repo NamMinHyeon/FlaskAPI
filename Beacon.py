@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, render_template
 from flask_restx import Resource, Api, Namespace
 from multiprocessing import Process, Queue, Lock
 import multiprocessing
@@ -27,9 +27,11 @@ db_host = get_secret("DB_HOST")
 db_user = get_secret("DB_USER")
 db_pass = get_secret("DB_PASS")
 db_port = get_secret("DB_PORT")
-db_name = get_secret("DB_NAME")
+db_name = get_secret("DB_NAME") #HSTEPUP
+db_name_SUB = get_secret("DB_NAME_SUB") #BOT
  
 conn =  pymssql.connect(db_host , db_user, db_pass, db_name)
+conn_BOT =  pymssql.connect(db_host , db_user, db_pass, db_name_SUB)
 #〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
 
 
@@ -697,3 +699,27 @@ class GetSeason(Resource):
                 "result"          : "99",
                 "message"         : "fail"
             }
+
+
+# 99. BOT API
+# └ answerCall  : 정답 호출 - 미사용 (HTML 표현 불가로 app.py로 이관 - 2022.02.05)
+@Beacon.route('/answerCall/<seq_sub>')
+class GetAnswer(Resource):
+
+    def get(self, seq_sub):
+        """정답 호출"""
+        # http://localhost/Beacon/answerCall/5
+
+        #BOT 스키마에 연결
+        cursor = conn_BOT.cursor()
+
+        params = (seq_sub)
+        cursor.callproc('GET_CORRECT_ANSWER', params)
+
+        result = [row for row in cursor]
+
+        cursor.close()
+
+        return result[0][0]
+        # return render_template('answerCorrect.html', answer=result[0][0])
+        # return '<HTML>TEST</HTML>'

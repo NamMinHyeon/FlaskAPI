@@ -47,6 +47,34 @@ api = Api(
     license="HAE"
 )
 
+#〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓  
+import pymssql
+import json
+
+BASE_DIR = "./"
+secret_file = os.path.join(BASE_DIR, 'secrets.json')
+
+with open(secret_file) as f:
+    secrets = json.loads(f.read())
+ 
+def get_secret(setting, secrets=secrets):
+    try:
+        return secrets[setting]
+    except KeyError:
+        err_msg = f"set the {setting} enviroment variable"
+        raise print(err_msg)
+        
+db_host = get_secret("DB_HOST")
+db_user = get_secret("DB_USER")
+db_pass = get_secret("DB_PASS")
+db_port = get_secret("DB_PORT")
+db_name = get_secret("DB_NAME") #HSTEPUP
+db_name_SUB = get_secret("DB_NAME_SUB") #BOT
+ 
+conn =  pymssql.connect(db_host , db_user, db_pass, db_name)
+conn_BOT =  pymssql.connect(db_host , db_user, db_pass, db_name_SUB)
+#〓〓〓〓〓〓〓〓〓〓〓〓DBMS Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
+
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 api.add_namespace(Beacon, '/Beacon')   #외부 구현 클래스 import 후 특정 경로(Ex. todos)에 등록할 수 있도록 구현
 
@@ -282,6 +310,30 @@ def after_request(response):
     log.logOutput(response, "└ AFTER")
     return response
 
+# 99. BOT API
+# └ answerCall  : 정답 호출 - 미사용 (HTML 표현 불가로 app.py로 이관 - 2022.02.05)
+@app.route('/randomCall')
+def randomCall():
+    """정답 호출"""
+    # http://localhost/randomCall
+
+    #BOT 스키마에 연결
+    cursor = conn_BOT.cursor()
+
+    cursor.callproc('GET_RANDOM_SENTENCE_NEW')
+
+    result = [row for row in cursor]
+
+    cursor.close()
+
+    return render_template('randomSentence.html'
+                            , random_0 = result[0][0],  answer_0 = result[0][1]
+                            , random_1 = result[1][0],  answer_1 = result[1][1]
+                            , random_2 = result[2][0],  answer_2 = result[2][1]
+                            , random_3 = result[3][0],  answer_3 = result[3][1]
+                            , random_4 = result[4][0],  answer_4 = result[4][1]
+                          )
+    
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     

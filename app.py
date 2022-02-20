@@ -311,7 +311,9 @@ def after_request(response):
     return response
 
 # 99. BOT API
-# └ answerCall  : 정답 호출 - 미사용 (HTML 표현 불가로 app.py로 이관 - 2022.02.05)
+# └ randomCall      : 리스트 호출 (HTML 사용)
+# └ randomCallJson  : 리스트 호출 (Vue3) 사용)
+# └ checkResult     : 오답 정리   (HTML 사용)
 @app.route('/randomCall')
 def randomCall():
     """정답 호출"""
@@ -333,6 +335,71 @@ def randomCall():
                             , random_3 = result[3][0],  answer_3 = result[3][1]
                             , random_4 = result[4][0],  answer_4 = result[4][1]
                           )
+
+@app.route('/randomCallJson')
+def randomCallJson():
+    """정답 호출"""
+    # http://localhost/randomCallJson
+
+    #BOT 스키마에 연결
+    cursor = conn_BOT.cursor()
+
+    cursor.callproc('GET_RANDOM_SENTENCE_NEW_2')
+
+    result = [row for row in cursor]
+
+    cursor.close()
+
+    return {    
+        "result_data"   : json.loads(str(result[0][1]))
+    }
+
+@app.route('/checkResult', methods=['POST'])
+def checkResult():
+    """오답 정리"""
+    # http://localhost/checkResult
+
+    # POST 방식으로 수신
+    seq_sub = request.json.get('SEQ_SUB')
+
+    seq_sub_str = str(seq_sub)
+
+    #BOT 스키마에 연결
+    cursor = conn_BOT.cursor()
+
+    params = (seq_sub_str, )
+
+    cursor.callproc('SET_SEQ_SUB', params)
+
+    result = [row for row in cursor]
+
+    # cursor 정상적으로 종료 필요
+    # Autocommit을 지원하지 않음
+    # commit 전에 result에 결과값 맵핑 필수
+    cursor.close()
+    conn_BOT.commit()
+
+    # 등록 성공
+    if result[0][0] == '01' :
+        return {
+            "result"          : result[0][0],
+            "message"         : "success",
+            "message_detail"  : str(result[0][1]).lower()
+        }
+    # 등록 실패 - 중복
+    elif result[0][0] == '99':
+        return {
+            "result"          : result[0][0],
+            "message"         : "fail",
+            "message_detail"  : str(result[0][1]).lower()
+        }
+    # 등록 실패 - 기타
+    else:
+        return {
+            "result"          : result[0][0],
+            "message"         : "fail",
+            "message_detail"  : str( result[0][1]).lower()
+        }
     
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":

@@ -354,7 +354,7 @@ def randomCallJson():
         "result_data"   : json.loads(str(result[0][1]))
     }
 
-@app.route('/checkResult', methods=['POST'])
+@app.route('/checkResult', methods=['POST']) 
 def checkResult():
     """오답 정리"""
     # http://localhost/checkResult

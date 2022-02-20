@@ -1,330 +1,1034 @@
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211107_23:24:38 / {'user_id': 'T@T.T', 'season_cd': 'A'} / BEFORE_REQUEST
-INFO:root:20211107_23:24:40 / <Response 1584 bytes [200 OK]> / AFTER_REQUEST
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:24:40] "POST /Beacon/pointSelect HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 12:04:57.283 ┃ BEFORE ┃ 127.0.0.1 ┃ / ┃ None
+2022-02-19 12:04:57.329 ┃ └ AFTER ┃ <Response 3825 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:04:57] "GET / HTTP/1.1" 200 -
+2022-02-19 12:04:57.536 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/droid-sans.css ┃ None
+2022-02-19 12:04:57.672 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui.css ┃ None
+2022-02-19 12:04:57.673 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui-bundle.js ┃ None
+2022-02-19 12:04:57.674 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui-standalone-preset.js ┃ None
+2022-02-19 12:04:58.869 ┃ └ AFTER ┃ <Response streamed [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:04:58] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+2022-02-19 12:04:58.981 ┃ └ AFTER ┃ <Response streamed [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:04:58] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+2022-02-19 12:04:59.067 ┃ └ AFTER ┃ <Response streamed [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:04:59] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 200 -
+2022-02-19 12:04:59.072 ┃ └ AFTER ┃ <Response streamed [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:04:59] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2022-02-19 12:04:59.178 ┃ BEFORE ┃ 127.0.0.1 ┃ /swagger.json ┃ None
+2022-02-19 12:04:59.180 ┃ └ AFTER ┃ <Response 7652 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:04:59] "GET /swagger.json HTTP/1.1" 200 -
+2022-02-19 12:05:05.431 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:05.490 ┃ └ AFTER ┃ <Response 2008 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:05] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:05.688 ┃ BEFORE ┃ 127.0.0.1 ┃ /favicon.ico ┃ None
+2022-02-19 12:05:05.689 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:05:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-02-19 12:05:29.270 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:29.295 ┃ └ AFTER ┃ <Response 2043 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:29] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:30.082 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:30.247 ┃ └ AFTER ┃ <Response 2065 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:30] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:30.260 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:30.265 ┃ └ AFTER ┃ <Response 2015 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:30] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:30.431 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:30.438 ┃ └ AFTER ┃ <Response 1976 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:30] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:30.605 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:30.665 ┃ └ AFTER ┃ <Response 2038 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:30] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:31.171 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:31.199 ┃ └ AFTER ┃ <Response 2015 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:31] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:31.427 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:31.518 ┃ └ AFTER ┃ <Response 2054 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:31] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:31.648 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:31.850 ┃ └ AFTER ┃ <Response 2078 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:31] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:31.859 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:31.864 ┃ └ AFTER ┃ <Response 2034 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:31] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:32.044 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:32.117 ┃ └ AFTER ┃ <Response 2051 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:32] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:32.189 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:32.194 ┃ └ AFTER ┃ <Response 2028 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:32] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:32.371 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:32.469 ┃ └ AFTER ┃ <Response 1983 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:32] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:32.522 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:32.527 ┃ └ AFTER ┃ <Response 2051 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:32] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:32.692 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:32.717 ┃ └ AFTER ┃ <Response 1996 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:32] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:32.842 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:32.973 ┃ └ AFTER ┃ <Response 2025 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:32] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:33.020 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:33.025 ┃ └ AFTER ┃ <Response 2057 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:33] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:33.191 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:33.244 ┃ └ AFTER ┃ <Response 2067 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:33] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:33.343 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:33.350 ┃ └ AFTER ┃ <Response 2063 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:33] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:33.524 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:33.581 ┃ └ AFTER ┃ <Response 2035 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:33] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:33.685 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:33.829 ┃ └ AFTER ┃ <Response 2098 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:33] "GET /randomCall HTTP/1.1" 200 -
+2022-02-19 12:05:33.870 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+2022-02-19 12:05:34.034 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+127.0.0.1 - - [19/Feb/2022 12:05:34] "[35m[1mGET /randomCall HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 12:05:34] "[35m[1mGET /randomCall HTTP/1.1[0m" 500 -
+2022-02-19 12:05:34.213 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+127.0.0.1 - - [19/Feb/2022 12:05:34] "[35m[1mGET /randomCall HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 12:05:34] "GET /randomCall?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:05:34] "GET /randomCall?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:05:34] "GET /randomCall?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:05:34] "GET /randomCall?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:05:35] "GET /randomCall?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-19 12:05:38.628 ┃ BEFORE ┃ 127.0.0.1 ┃ / ┃ None
+2022-02-19 12:05:38.631 ┃ └ AFTER ┃ <Response 3825 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:38] "GET / HTTP/1.1" 200 -
+2022-02-19 12:05:38.948 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/droid-sans.css ┃ None
+2022-02-19 12:05:38.949 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui.css ┃ None
+2022-02-19 12:05:38.950 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui-bundle.js ┃ None
+2022-02-19 12:05:38.951 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui-standalone-preset.js ┃ None
+2022-02-19 12:05:38.951 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+127.0.0.1 - - [19/Feb/2022 12:05:38] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+2022-02-19 12:05:38.952 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+127.0.0.1 - - [19/Feb/2022 12:05:38] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2022-02-19 12:05:38.953 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+127.0.0.1 - - [19/Feb/2022 12:05:38] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+2022-02-19 12:05:38.953 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+127.0.0.1 - - [19/Feb/2022 12:05:38] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2022-02-19 12:05:39.201 ┃ BEFORE ┃ 127.0.0.1 ┃ /swagger.json ┃ None
+2022-02-19 12:05:39.201 ┃ └ AFTER ┃ <Response 7652 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:39] "GET /swagger.json HTTP/1.1" 200 -
+2022-02-19 12:05:39.306 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/favicon-32x32.png ┃ None
+2022-02-19 12:05:39.307 ┃ └ AFTER ┃ <Response streamed [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:05:39] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2022-02-19 12:06:06.892 ┃ BEFORE ┃ 127.0.0.1 ┃ / ┃ None
+2022-02-19 12:06:06.893 ┃ └ AFTER ┃ <Response 3825 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:06:06] "GET / HTTP/1.1" 200 -
+2022-02-19 12:06:07.221 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/droid-sans.css ┃ None
+2022-02-19 12:06:07.222 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui.css ┃ None
+2022-02-19 12:06:07.223 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui-bundle.js ┃ None
+2022-02-19 12:06:07.225 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/swagger-ui-standalone-preset.js ┃ None
+2022-02-19 12:06:07.226 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+2022-02-19 12:06:07.227 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+127.0.0.1 - - [19/Feb/2022 12:06:07] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [19/Feb/2022 12:06:07] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+2022-02-19 12:06:07.228 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+2022-02-19 12:06:07.228 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+127.0.0.1 - - [19/Feb/2022 12:06:07] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [19/Feb/2022 12:06:07] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2022-02-19 12:06:07.465 ┃ BEFORE ┃ 127.0.0.1 ┃ /swagger.json ┃ None
+2022-02-19 12:06:07.468 ┃ └ AFTER ┃ <Response 7652 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:06:07] "GET /swagger.json HTTP/1.1" 200 -
+2022-02-19 12:06:07.597 ┃ BEFORE ┃ 127.0.0.1 ┃ /swaggerui/favicon-32x32.png ┃ None
+2022-02-19 12:06:07.597 ┃ └ AFTER ┃ <Response streamed [304 NOT MODIFIED]>
+127.0.0.1 - - [19/Feb/2022 12:06:07] "[36mGET /swaggerui/favicon-32x32.png HTTP/1.1[0m" 304 -
+2022-02-19 12:06:10.779 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+127.0.0.1 - - [19/Feb/2022 12:06:10] "[35m[1mGET /randomCall HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 12:06:11] "GET /randomCall?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:11] "GET /randomCall?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:11] "GET /randomCall?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:11] "GET /randomCall?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-19 12:06:15.955 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+127.0.0.1 - - [19/Feb/2022 12:06:15] "[35m[1mGET /randomCall HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 12:06:16] "GET /randomCall?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:16] "GET /randomCall?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:16] "GET /randomCall?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-19 12:06:16.604 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+127.0.0.1 - - [19/Feb/2022 12:06:16] "GET /randomCall?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:16] "[35m[1mGET /randomCall HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 12:06:16] "GET /randomCall?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:16] "GET /randomCall?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:16] "GET /randomCall?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-19 12:06:17.255 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCall ┃ None
+127.0.0.1 - - [19/Feb/2022 12:06:17] "[35m[1mGET /randomCall HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 12:06:17] "GET /randomCall?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:17] "GET /randomCall?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:17] "GET /randomCall?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:17] "GET /randomCall?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 12:06:18] "GET /randomCall?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 12:08:14.936 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:08:15.154 ┃ └ AFTER ┃ <Response 586 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:08:15] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:08:27.701 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 161}
+2022-02-19 12:08:27.743 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:08:27] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 12:08:29.569 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:08:29.587 ┃ └ AFTER ┃ <Response 833 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:08:29] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:08:33.231 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:08:33.379 ┃ └ AFTER ┃ <Response 763 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:08:33] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:08:33.584 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:08:33.590 ┃ └ AFTER ┃ <Response 878 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:08:33] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:08:33.887 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:08:33.899 ┃ └ AFTER ┃ <Response 768 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:08:33] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:08:34.210 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:08:34.388 ┃ └ AFTER ┃ <Response 877 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:08:34] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:08:34.599 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:08:34.612 ┃ └ AFTER ┃ <Response 839 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:08:34] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:09:39.759 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:09:39.802 ┃ └ AFTER ┃ <Response 826 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:09:39] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:09:40.632 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:09:40.793 ┃ └ AFTER ┃ <Response 811 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:09:40] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:09:58.065 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:09:58.209 ┃ └ AFTER ┃ <Response 893 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:09:58] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:12:19.160 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:12:19.314 ┃ └ AFTER ┃ <Response 804 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:12:19] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:13:08.078 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:13:08.218 ┃ └ AFTER ┃ <Response 886 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:13:08] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:14:36.516 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:14:36.563 ┃ └ AFTER ┃ <Response 853 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:14:36] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:19:05.604 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:19:05.714 ┃ └ AFTER ┃ <Response 825 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:19:05] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:19:18.908 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:19:18.938 ┃ └ AFTER ┃ <Response 891 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:19:18] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:19:25.587 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:19:25.679 ┃ └ AFTER ┃ <Response 856 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:19:25] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:24:39.930 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:24:40.287 ┃ └ AFTER ┃ <Response 834 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:24:40] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:24:50.966 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:24:50.996 ┃ └ AFTER ┃ <Response 800 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:24:50] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:24:51.514 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:24:51.601 ┃ └ AFTER ┃ <Response 834 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:24:51] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:24:52.201 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:24:52.386 ┃ └ AFTER ┃ <Response 836 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:24:52] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:24:52.866 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:24:53.073 ┃ └ AFTER ┃ <Response 865 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:24:53] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:35:20.755 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:35:20.831 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/img/menu.png ┃ None
+2022-02-19 12:35:20.832 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:35:20] "[33mGET /assets/img/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:35:20.959 ┃ └ AFTER ┃ <Response 763 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:35:20] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:35:24.920 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:35:24.922 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/img/menu.png ┃ None
+2022-02-19 12:35:24.923 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:35:24] "[33mGET /assets/img/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:35:24.947 ┃ └ AFTER ┃ <Response 840 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:35:24] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:35:30.341 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:35:30.342 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:35:30] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:35:31.735 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:35:31.738 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:35:31.740 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:35:31] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:35:31.890 ┃ └ AFTER ┃ <Response 813 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:35:31] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:35:32.331 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:35:32.335 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:35:32.336 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:35:32] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:35:32.467 ┃ └ AFTER ┃ <Response 870 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:35:32] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:35:32.896 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:35:32.899 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:35:32.899 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:35:32] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:35:33.049 ┃ └ AFTER ┃ <Response 802 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:35:33] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:36:21.321 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:36:21.513 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:36:21.514 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:36:21] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:36:21.525 ┃ └ AFTER ┃ <Response 763 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:36:21] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:36:54.033 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:36:54.067 ┃ └ AFTER ┃ <Response 855 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:36:54] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:36:54.075 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:36:54.076 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:36:54] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:36:54.647 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:36:54.649 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:36:54.650 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:36:54] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:36:54.699 ┃ └ AFTER ┃ <Response 874 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:36:54] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:37:19.194 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:37:19.227 ┃ └ AFTER ┃ <Response 790 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:37:19] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:37:19.234 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:37:19.236 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:37:19] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:37:31.366 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:37:31.369 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:37:31.370 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:37:31] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:37:31.525 ┃ └ AFTER ┃ <Response 827 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:37:31] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:38:08.711 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets ┃ None
+2022-02-19 12:38:08.712 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:38:08] "[33mGET /assets HTTP/1.1[0m" 404 -
+2022-02-19 12:38:16.236 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/logo.png ┃ None
+2022-02-19 12:38:16.236 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:38:16] "[33mGET /assets/logo.png HTTP/1.1[0m" 404 -
+2022-02-19 12:38:20.734 ┃ BEFORE ┃ 127.0.0.1 ┃ /src/assets/logo.png ┃ None
+2022-02-19 12:38:20.734 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:38:20] "[33mGET /src/assets/logo.png HTTP/1.1[0m" 404 -
+2022-02-19 12:38:43.753 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/logo.png ┃ None
+2022-02-19 12:38:43.754 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:38:43] "[33mGET /assets/logo.png HTTP/1.1[0m" 404 -
+2022-02-19 12:38:49.047 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:38:49.097 ┃ └ AFTER ┃ <Response 828 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:38:49] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:38:49.106 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:38:49.106 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:38:49] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:38:56.943 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:38:56.946 ┃ BEFORE ┃ 127.0.0.1 ┃ /assets/menu.png ┃ None
+2022-02-19 12:38:56.947 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 12:38:56] "[33mGET /assets/menu.png HTTP/1.1[0m" 404 -
+2022-02-19 12:38:56.956 ┃ └ AFTER ┃ <Response 849 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:38:56] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:39:29.522 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:39:29.659 ┃ └ AFTER ┃ <Response 796 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:39:29] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:44:54.242 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:44:54.354 ┃ └ AFTER ┃ <Response 892 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:44:54] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:45:48.367 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:45:48.604 ┃ └ AFTER ┃ <Response 864 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:45:48] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:45:48.611 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:45:48.617 ┃ └ AFTER ┃ <Response 839 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:45:48] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:45:48.624 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:45:48.630 ┃ └ AFTER ┃ <Response 895 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:45:48] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:45:48.636 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:45:48.642 ┃ └ AFTER ┃ <Response 825 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:45:48] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:54:33.343 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:54:33.426 ┃ └ AFTER ┃ <Response 806 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:54:33] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:54:56.596 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 12:54:56.627 ┃ └ AFTER ┃ <Response 820 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:54:56] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 12:55:43.208 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 391}
+2022-02-19 12:55:43.419 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 12:55:43] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:08:51.551 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:08:51.862 ┃ └ AFTER ┃ <Response 860 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:08:51] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:12:57.098 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:12:57.139 ┃ └ AFTER ┃ <Response 903 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:12:57] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:15:40.020 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:15:40.095 ┃ └ AFTER ┃ <Response 879 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:15:40] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:18:53.563 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:18:53.854 ┃ └ AFTER ┃ <Response 938 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:18:53] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:19:26.667 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:19:26.699 ┃ └ AFTER ┃ <Response 888 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:19:26] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:19:27.945 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:19:27.975 ┃ └ AFTER ┃ <Response 902 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:19:27] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:19:28.571 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:19:28.667 ┃ └ AFTER ┃ <Response 826 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:19:28] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:19:29.134 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:19:29.190 ┃ └ AFTER ┃ <Response 858 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:19:29] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:20:14.169 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:20:14.199 ┃ └ AFTER ┃ <Response 894 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:14] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:20:14.825 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:20:14.853 ┃ └ AFTER ┃ <Response 836 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:14] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:20:24.401 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 414}
+2022-02-19 13:20:24.571 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:24] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:20:24.580 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 166}
+2022-02-19 13:20:24.594 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:24] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:20:25.016 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 320}
+2022-02-19 13:20:25.102 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:25] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:20:25.430 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 390}
+2022-02-19 13:20:25.575 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:25] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:20:25.808 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 391}
+2022-02-19 13:20:25.908 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:25] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:20:26.922 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:20:26.959 ┃ └ AFTER ┃ <Response 873 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:26] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:20:31.028 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:20:31.061 ┃ └ AFTER ┃ <Response 848 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:20:31] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:20:59.868 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:21:00.074 ┃ └ AFTER ┃ <Response 876 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:21:00] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:25:05.183 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 331}
+2022-02-19 13:25:05.320 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:25:05] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:28:57.498 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 514}
+2022-02-19 13:28:57.551 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:28:57] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:30:41.806 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:30:41.936 ┃ └ AFTER ┃ <Response 778 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:30:41] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:31:19.063 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:31:19.093 ┃ └ AFTER ┃ <Response 815 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:31:19] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:32:02.625 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:32:02.763 ┃ └ AFTER ┃ <Response 822 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:32:02] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:37:23.251 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:37:23.349 ┃ └ AFTER ┃ <Response 908 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:37:23] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:41:43.287 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:41:43.344 ┃ └ AFTER ┃ <Response 862 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:41:43] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:41:46.333 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:41:46.439 ┃ └ AFTER ┃ <Response 932 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:41:46] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:41:53.598 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:41:53.705 ┃ └ AFTER ┃ <Response 827 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:41:53] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:24.668 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:24.869 ┃ └ AFTER ┃ <Response 853 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:24] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:24.876 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:24.883 ┃ └ AFTER ┃ <Response 921 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:24] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:55.569 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:55.601 ┃ └ AFTER ┃ <Response 780 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:55] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:55.974 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:56.001 ┃ └ AFTER ┃ <Response 838 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:56] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:56.560 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:56.589 ┃ └ AFTER ┃ <Response 961 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:56] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:57.060 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:57.108 ┃ └ AFTER ┃ <Response 846 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:57] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:57.525 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:57.556 ┃ └ AFTER ┃ <Response 924 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:57] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:57.759 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:57.801 ┃ └ AFTER ┃ <Response 891 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:57] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:58.010 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:58.143 ┃ └ AFTER ┃ <Response 860 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:58] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:58.193 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:58.200 ┃ └ AFTER ┃ <Response 825 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:47:58] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:47:58.370 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:58.553 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:47:58.765 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 13:47:58] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 13:47:58] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 13:47:58] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+2022-02-19 13:47:59.091 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 13:47:59] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+2022-02-19 13:47:59.286 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 13:47:59] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+2022-02-19 13:48:00.662 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 13:48:00] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+2022-02-19 13:48:01.285 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 13:48:01] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+2022-02-19 13:48:07.286 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 13:48:07] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+2022-02-19 13:48:08.689 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 13:48:08] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211107_23:26:32 / <Request 'http://localhost/Beacon/pointSelect' [POST]> / {'user_id': 'T@T.T', 'season_cd': 'A'} / BEFORE_REQUEST
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:26:34] "[35m[1mPOST /Beacon/pointSelect HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\log.py', reloading
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 13:48:27.047 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:48:27.119 ┃ └ AFTER ┃ <Response 918 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:48:27] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:51:09.957 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:51:10.098 ┃ └ AFTER ┃ <Response 824 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:51:10] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:51:11.503 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:51:11.536 ┃ └ AFTER ┃ <Response 913 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:51:11] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:51:11.961 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:51:12.014 ┃ └ AFTER ┃ <Response 887 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:51:12] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:52:37.134 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:52:37.179 ┃ └ AFTER ┃ <Response 872 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:52:37] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:52:37.185 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:52:37.192 ┃ └ AFTER ┃ <Response 887 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:52:37] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:53:12.710 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:53:12.777 ┃ └ AFTER ┃ <Response 875 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:53:12] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:53:16.243 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 337}
+2022-02-19 13:53:16.277 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:53:16] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:53:17.395 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'seq_sub': 38}
+2022-02-19 13:53:17.576 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:53:17] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 13:53:48.730 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:53:48.759 ┃ └ AFTER ┃ <Response 837 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:53:48] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:53:59.500 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:53:59.530 ┃ └ AFTER ┃ <Response 903 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:53:59] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:54:18.961 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:54:18.994 ┃ └ AFTER ┃ <Response 868 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:54:18] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:54:18.999 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:54:19.005 ┃ └ AFTER ┃ <Response 877 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:54:19] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:54:35.534 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:54:35.660 ┃ └ AFTER ┃ <Response 861 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:54:35] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:54:35.680 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:54:35.697 ┃ └ AFTER ┃ <Response 859 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:54:35] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:54:46.993 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:54:47.022 ┃ └ AFTER ┃ <Response 947 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:54:47] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:55:10.751 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:55:10.926 ┃ └ AFTER ┃ <Response 913 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:55:10] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:55:11.371 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:55:11.617 ┃ └ AFTER ┃ <Response 882 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:55:11] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:55:12.853 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:55:13.063 ┃ └ AFTER ┃ <Response 899 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:55:13] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:59:35.923 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:59:36.084 ┃ └ AFTER ┃ <Response 952 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:59:36] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:59:37.075 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:59:37.181 ┃ └ AFTER ┃ <Response 836 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:59:37] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 13:59:37.653 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 13:59:37.865 ┃ └ AFTER ┃ <Response 846 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 13:59:37] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:00:00.887 ┃ BEFORE ┃ 127.0.0.1 ┃ / ┃ None
+2022-02-19 14:00:00.896 ┃ └ AFTER ┃ <Response 3825 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:00:00] "GET / HTTP/1.1" 200 -
+2022-02-19 14:28:33.867 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:28:33.906 ┃ └ AFTER ┃ <Response 924 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:28:33] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:28:43.637 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:28:43.669 ┃ └ AFTER ┃ <Response 865 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:28:43] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:29:03.605 ┃ BEFORE ┃ 127.0.0.1 ┃ /randonCallJson ┃ None
+2022-02-19 14:29:03.607 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 14:29:03] "[33mGET /randonCallJson HTTP/1.1[0m" 404 -
+2022-02-19 14:29:13.275 ┃ BEFORE ┃ 127.0.0.1 ┃ /randonCallJson ┃ None
+2022-02-19 14:29:13.275 ┃ └ AFTER ┃ <Response streamed [404 NOT FOUND]>
+127.0.0.1 - - [19/Feb/2022 14:29:13] "[33mGET /randonCallJson HTTP/1.1[0m" 404 -
+2022-02-19 14:29:16.467 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:29:16.639 ┃ └ AFTER ┃ <Response 994 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:29:16] "GET /randomCallJson HTTP/1.1" 200 -
+ * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\log.py', reloading
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:36:57.739 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:36:57.780 ┃ └ AFTER ┃ <Response 942 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:36:57] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:37:13.398 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:37:13.632 ┃ └ AFTER ┃ <Response 942 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:37:13] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:37:32.701 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:37:32.741 ┃ └ AFTER ┃ <Response 885 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:37:32] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:37:33.510 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:37:33.719 ┃ └ AFTER ┃ <Response 869 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:37:33] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:37:34.227 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:37:34.407 ┃ └ AFTER ┃ <Response 858 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:37:34] "GET /randomCallJson HTTP/1.1" 200 -
+ * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:37:54.507 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:37:54.535 ┃ └ AFTER ┃ <Response 887 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:37:54] "GET /randomCallJson HTTP/1.1" 200 -
+ * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211107_23:28:13 / <Request 'http://localhost/Beacon/pointSelect' [POST]> / {'user_id': 'T@T.T', 'season_cd': 'A'} / BEFORE_REQUEST
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:38:19.533 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:38:19.613 ┃ └ AFTER ┃ <Response 941 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:38:19] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:38:26.365 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:38:26.397 ┃ └ AFTER ┃ <Response 934 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:38:26] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:38:27.021 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:38:27.049 ┃ └ AFTER ┃ <Response 738 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:38:27] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:38:27.911 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:38:28.209 ┃ └ AFTER ┃ <Response 785 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:38:28] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:38:29.538 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:38:29.564 ┃ └ AFTER ┃ <Response 951 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:38:29] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:38:30.651 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:38:30.805 ┃ └ AFTER ┃ <Response 906 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:38:30] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:40:02.583 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:40:02.936 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 14:40:03] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 14:40:03] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+2022-02-19 14:44:34.853 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+127.0.0.1 - - [19/Feb/2022 14:44:34] "[35m[1mGET /randomCallJson HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 14:44:35] "GET /randomCallJson?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 14:44:35] "GET /randomCallJson?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 14:44:35] "GET /randomCallJson?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 14:44:36] "GET /randomCallJson?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2022 14:44:36] "GET /randomCallJson?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211107_23:30:39 / <Request 'http://localhost/Beacon/pointSelect' [POST]> / {'user_id': 'T@T.T', 'season_cd': 'A'} / BEFORE_REQUEST
-INFO:root:20211107_23:30:43 / <Response 1584 bytes [200 OK]> / AFTER_REQUEST 
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:30:43] "POST /Beacon/pointSelect HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:44:58.443 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:44:58.634 ┃ └ AFTER ┃ <Response 937 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:44:58] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:45:08.718 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:45:08.749 ┃ └ AFTER ┃ <Response 877 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:45:08] "GET /randomCallJson HTTP/1.1" 200 -
+ * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211107_23:31:05 / <Request 'http://localhost/Beacon/pointSelect' [POST]> / {'user_id': 'T@T.T', 'season_cd': 'A'} / BEFORE_REQUEST
-INFO:root:20211107_23:32:19 / <Response 1584 bytes [200 OK]> / AFTER_REQUEST 
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:32:19] "POST /Beacon/pointSelect HTTP/1.1" 200 -
-INFO:root:20211107_23:34:08 / <Request 'http://localhost/Beacon/pointSelect' [POST]> / {'user_id': 'T@T.T', 'season_cd': 'A'} / BEFORE_REQUEST
-INFO:root:20211107_23:34:10 / <Response 1584 bytes [200 OK]> / AFTER_REQUEST 
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:34:10] "POST /Beacon/pointSelect HTTP/1.1" 200 -
-INFO:root:20211107_23:35:49 / <Request 'http://localhost/Beacon/pointSelect' [POST]> / {'user_id': 'T@T.T', 'season_cd': 'A'} / BEFORE_REQUEST
-INFO:root:20211107_23:35:51 / <Response 1584 bytes [200 OK]> / AFTER_REQUEST 
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:35:51] "POST /Beacon/pointSelect HTTP/1.1" 200 -
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:45:31.041 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:45:31.155 ┃ └ AFTER ┃ <Response 888 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:45:31] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:45:32.430 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:45:32.613 ┃ └ AFTER ┃ <Response 943 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:45:32] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:45:33.277 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:45:33.391 ┃ └ AFTER ┃ <Response 983 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:45:33] "GET /randomCallJson HTTP/1.1" 200 -
+ * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211107_23:37:25 / 127.0.0.1 / /Beacon/pointSelect / {'user_id': 'T@T.T', 'season_cd': 'A'} / BEFORE_REQUEST
-INFO:root:20211107_23:37:27 / <Response 1584 bytes [200 OK]> / AFTER_REQUEST 
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:37:27] "POST /Beacon/pointSelect HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\log.py', reloading
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211107_23:38:32 / BEFORE_REQUEST / 127.0.0.1 / /Beacon/pointSelect / {'user_id': 'T@T.T', 'season_cd': 'A'}
-INFO:root:20211107_23:38:34 / AFTER_REQUEST / <Response 1584 bytes [200 OK]> 
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:38:34] "POST /Beacon/pointSelect HTTP/1.1" 200 -
-INFO:root:20211107_23:39:05 / BEFORE_REQUEST / 127.0.0.1 / /Beacon/pointSeasonRank / {'season_cd': 'X'}
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:39:06] "[35m[1mPOST /Beacon/pointSeasonRank HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\Beacon.py', reloading
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:46:12.035 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:46:12.213 ┃ └ AFTER ┃ <Response 909 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:46:12] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:46:36.914 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:46:37.125 ┃ └ AFTER ┃ <Response 833 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:46:37] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:46:52.282 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:46:52.500 ┃ └ AFTER ┃ <Response 849 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:46:52] "GET /randomCallJson HTTP/1.1" 200 -
+ * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211107_23:39:58 / BEFORE_REQUEST / 127.0.0.1 / /Beacon/pointSeasonRank / {'season_cd': 'X'}
-INFO:root:20211107_23:40:00 / AFTER_REQUEST / <Response 19493 bytes [200 OK]> 
-INFO:werkzeug:127.0.0.1 - - [07/Nov/2021 23:40:00] "POST /Beacon/pointSeasonRank HTTP/1.1" 200 -
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:48:22.347 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:48:22.503 ┃ └ AFTER ┃ <Response 876 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:48:22] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:48:24.819 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:48:24.944 ┃ └ AFTER ┃ <Response 968 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:48:24] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:48:41.234 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:48:41.362 ┃ └ AFTER ┃ <Response 876 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:48:41] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:48:56.086 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 514}
+127.0.0.1 - - [19/Feb/2022 14:48:56] "[35m[1mPOST /checkResult HTTP/1.1[0m" 500 -
+2022-02-19 14:48:58.127 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 484}
+127.0.0.1 - - [19/Feb/2022 14:48:58] "[35m[1mPOST /checkResult HTTP/1.1[0m" 500 -
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'C:\\Users\\nmh88\\Desktop\\PythonWorkspace\\FlaskApi\\app.py', reloading
-INFO:root:20211108_01:17:44 / BEFORE_REQUEST / 127.0.0.1 / /Beacon/pointSelect / {'user_id': 'T@T.T', 'season_cd': 'A'}
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-INFO:werkzeug: * Restarting with stat
-DEBUG:passlib.registry:registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-DEBUG:passlib.registry:registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-DEBUG:passlib.registry:registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
-DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
-DEBUG:passlib.registry:registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
-DEBUG:passlib.registry:registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
-DEBUG:passlib.registry:registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 111-002-112
-WARNING:werkzeug: * Running on all addresses.
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:49:50.123 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:49:50.333 ┃ └ AFTER ┃ <Response 860 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:49:50] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:49:51.733 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:49:51.856 ┃ └ AFTER ┃ <Response 856 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:49:51] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:49:52.996 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 244}
+2022-02-19 14:49:53.017 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:49:53] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 14:49:54.912 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 403}
+2022-02-19 14:49:54.931 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:49:54] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 14:49:56.071 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 322}
+2022-02-19 14:49:56.091 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:49:56] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 14:49:57.193 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 118}
+2022-02-19 14:49:57.213 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:49:57] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 14:49:58.735 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 331}
+2022-02-19 14:49:58.808 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:49:58] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 14:49:59.063 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 331}
+2022-02-19 14:49:59.241 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 331}
+127.0.0.1 - - [19/Feb/2022 14:49:59] "[35m[1mPOST /checkResult HTTP/1.1[0m" 500 -
+127.0.0.1 - - [19/Feb/2022 14:49:59] "[35m[1mPOST /checkResult HTTP/1.1[0m" 500 -
+2022-02-19 14:49:59.414 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 331}
+127.0.0.1 - - [19/Feb/2022 14:49:59] "[35m[1mPOST /checkResult HTTP/1.1[0m" 500 -
+2022-02-19 14:49:59.898 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 331}
+127.0.0.1 - - [19/Feb/2022 14:49:59] "[35m[1mPOST /checkResult HTTP/1.1[0m" 500 -
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-002-112
+ * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://192.168.35.100:80/ (Press CTRL+C to quit)
-INFO:root:20211108_01:18:02 / BEFORE_REQUEST / 127.0.0.1 / /Beacon/pointSelect / {'user_id': 'T@T.T', 'season_cd': 'A'}
-INFO:root:20211108_01:18:04 / AFTER_REQUEST / <Response 1584 bytes [200 OK]> 
-INFO:werkzeug:127.0.0.1 - - [08/Nov/2021 01:18:04] "POST /Beacon/pointSelect HTTP/1.1" 200 -
+ * Running on http://192.168.35.230:80/ (Press CTRL+C to quit)
+2022-02-19 14:53:24.840 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:53:25.020 ┃ └ AFTER ┃ <Response 922 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:53:25] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:55:38.721 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:55:38.777 ┃ └ AFTER ┃ <Response 840 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:55:38] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:55:47.347 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:55:47.467 ┃ └ AFTER ┃ <Response 881 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:55:47] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:55:51.053 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:55:51.082 ┃ └ AFTER ┃ <Response 843 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:55:51] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 14:58:06.941 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 14:58:07.071 ┃ └ AFTER ┃ <Response 921 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 14:58:07] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:11:08.456 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:11:08.508 ┃ └ AFTER ┃ <Response 811 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:11:08] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:14:14.581 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:14:14.794 ┃ └ AFTER ┃ <Response 807 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:14:14] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:14:20.772 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:14:20.801 ┃ └ AFTER ┃ <Response 822 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:14:20] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:19:15.307 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:19:15.357 ┃ └ AFTER ┃ <Response 955 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:19:15] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:37:55.447 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:37:55.585 ┃ └ AFTER ┃ <Response 774 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:37:55] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:46:06.226 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:46:06.339 ┃ └ AFTER ┃ <Response 842 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:46:06] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:49:34.928 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:49:35.138 ┃ └ AFTER ┃ <Response 938 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:49:35] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:49:36.013 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:49:36.046 ┃ └ AFTER ┃ <Response 849 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:49:36] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:53:45.688 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:53:45.730 ┃ └ AFTER ┃ <Response 841 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:53:45] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:53:50.311 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:53:50.501 ┃ └ AFTER ┃ <Response 847 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:53:50] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:55:01.361 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:55:01.411 ┃ └ AFTER ┃ <Response 767 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:55:01] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:55:56.886 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:55:56.947 ┃ └ AFTER ┃ <Response 862 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:55:56] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:56:00.473 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:56:00.504 ┃ └ AFTER ┃ <Response 877 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:56:00] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:56:28.695 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:56:28.726 ┃ └ AFTER ┃ <Response 936 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:56:28] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:57:08.446 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:57:08.485 ┃ └ AFTER ┃ <Response 817 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:57:08] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:57:29.992 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:57:30.187 ┃ └ AFTER ┃ <Response 815 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:57:30] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:57:43.723 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:57:44.052 ┃ └ AFTER ┃ <Response 862 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:57:44] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:57:59.752 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:57:59.998 ┃ └ AFTER ┃ <Response 887 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:57:59] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:58:06.038 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:58:06.351 ┃ └ AFTER ┃ <Response 896 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:58:06] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:58:26.822 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:58:26.855 ┃ └ AFTER ┃ <Response 860 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:58:26] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:58:35.857 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:58:35.889 ┃ └ AFTER ┃ <Response 848 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:58:35] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:59:13.888 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:59:13.918 ┃ └ AFTER ┃ <Response 920 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:13] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:59:29.701 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:59:29.714 ┃ └ AFTER ┃ <Response 891 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:29] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:59:35.539 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:59:35.651 ┃ └ AFTER ┃ <Response 940 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:35] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:59:43.285 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:59:43.298 ┃ └ AFTER ┃ <Response 869 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:43] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:59:47.964 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:59:47.999 ┃ └ AFTER ┃ <Response 866 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:47] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:59:52.900 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:59:53.042 ┃ └ AFTER ┃ <Response 882 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:53] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:59:57.564 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 15:59:57.597 ┃ └ AFTER ┃ <Response 926 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:57] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 15:59:58.605 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 82}
+2022-02-19 15:59:58.652 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:58] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 15:59:59.823 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 48}
+2022-02-19 15:59:59.844 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 15:59:59] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:00:00.867 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 65}
+2022-02-19 16:00:01.414 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:01] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:00:02.081 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 251}
+2022-02-19 16:00:02.178 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:02] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:00:03.197 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 403}
+2022-02-19 16:00:03.607 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:03] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:00:03.759 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:03.838 ┃ └ AFTER ┃ <Response 938 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:03] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:04.290 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:04.341 ┃ └ AFTER ┃ <Response 826 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:04] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:04.714 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:04.848 ┃ └ AFTER ┃ <Response 939 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:04] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:05.134 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:05.524 ┃ └ AFTER ┃ <Response 773 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:05] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:05.569 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:05.577 ┃ └ AFTER ┃ <Response 824 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:05] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:06.244 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:06.275 ┃ └ AFTER ┃ <Response 879 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:06] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:06.906 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:07.104 ┃ └ AFTER ┃ <Response 945 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:07] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:08.022 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 372}
+2022-02-19 16:00:08.059 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:08] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:00:09.258 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 446}
+2022-02-19 16:00:09.380 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:09] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:00:10.372 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 368}
+2022-02-19 16:00:10.405 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:10] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:00:11.636 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:11.687 ┃ └ AFTER ┃ <Response 863 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:11] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:14.817 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:14.849 ┃ └ AFTER ┃ <Response 875 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:14] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:00:18.108 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:00:18.240 ┃ └ AFTER ┃ <Response 884 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:00:18] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:02:20.566 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:02:20.622 ┃ └ AFTER ┃ <Response 841 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:02:20] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:02:21.152 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:02:21.183 ┃ └ AFTER ┃ <Response 926 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:02:21] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:02:21.557 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:02:21.691 ┃ └ AFTER ┃ <Response 800 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:02:21] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:02:53.564 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:02:53.598 ┃ └ AFTER ┃ <Response 993 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:02:53] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:03:44.391 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:03:44.425 ┃ └ AFTER ┃ <Response 902 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:03:44] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:03:59.558 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:03:59.692 ┃ └ AFTER ┃ <Response 912 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:03:59] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:04:03.332 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:04:03.365 ┃ └ AFTER ┃ <Response 927 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:04:03] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:04:42.534 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:04:42.570 ┃ └ AFTER ┃ <Response 898 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:04:42] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:06:12.343 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:06:12.560 ┃ └ AFTER ┃ <Response 914 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:06:12] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:06:25.613 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 101}
+2022-02-19 16:06:25.647 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:06:25] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:07:19.314 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:07:19.382 ┃ └ AFTER ┃ <Response 830 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:07:19] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:07:20.070 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:07:20.194 ┃ └ AFTER ┃ <Response 825 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:07:20] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:07:26.963 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:07:27.019 ┃ └ AFTER ┃ <Response 899 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:07:27] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:07:31.160 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:07:31.190 ┃ └ AFTER ┃ <Response 915 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:07:31] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:07:45.952 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:07:46.158 ┃ └ AFTER ┃ <Response 924 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:07:46] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:07:47.198 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:07:47.355 ┃ └ AFTER ┃ <Response 804 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:07:47] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:00.424 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 159}
+2022-02-19 16:08:00.879 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:00] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:08:01.568 ┃ BEFORE ┃ 127.0.0.1 ┃ /checkResult ┃ {'SEQ_SUB': 141}
+2022-02-19 16:08:01.604 ┃ └ AFTER ┃ <Response 78 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:01] "POST /checkResult HTTP/1.1" 200 -
+2022-02-19 16:08:02.768 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:02.797 ┃ └ AFTER ┃ <Response 855 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:02] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:03.380 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:03.409 ┃ └ AFTER ┃ <Response 819 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:03] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:03.971 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:04.182 ┃ └ AFTER ┃ <Response 899 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:04] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:04.679 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:04.709 ┃ └ AFTER ┃ <Response 883 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:04] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:05.261 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:05.455 ┃ └ AFTER ┃ <Response 820 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:05] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:05.994 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:06.202 ┃ └ AFTER ┃ <Response 925 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:06] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:06.736 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:07.064 ┃ └ AFTER ┃ <Response 886 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:07] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:07.794 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:07.908 ┃ └ AFTER ┃ <Response 764 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:07] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:08.509 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:08.662 ┃ └ AFTER ┃ <Response 943 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:08] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:09.259 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:09.333 ┃ └ AFTER ┃ <Response 890 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:09] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:09.973 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:10.068 ┃ └ AFTER ┃ <Response 878 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:10] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:10.625 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:10.833 ┃ └ AFTER ┃ <Response 881 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:10] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:11.186 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:11.352 ┃ └ AFTER ┃ <Response 872 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:11] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:11.875 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:12.192 ┃ └ AFTER ┃ <Response 896 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:12] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:12.472 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:12.669 ┃ └ AFTER ┃ <Response 995 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:12] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:13.148 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:13.205 ┃ └ AFTER ┃ <Response 933 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:13] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:13.737 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:13.938 ┃ └ AFTER ┃ <Response 855 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:13] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:14.363 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:14.553 ┃ └ AFTER ┃ <Response 842 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:14] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:15.103 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:15.133 ┃ └ AFTER ┃ <Response 847 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:15] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:15.697 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:15.727 ┃ └ AFTER ┃ <Response 936 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:15] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:16.288 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:16.319 ┃ └ AFTER ┃ <Response 915 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:16] "GET /randomCallJson HTTP/1.1" 200 -
+2022-02-19 16:08:16.941 ┃ BEFORE ┃ 127.0.0.1 ┃ /randomCallJson ┃ None
+2022-02-19 16:08:17.114 ┃ └ AFTER ┃ <Response 865 bytes [200 OK]>
+127.0.0.1 - - [19/Feb/2022 16:08:17] "GET /randomCallJson HTTP/1.1" 200 -

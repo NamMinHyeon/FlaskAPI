@@ -336,7 +336,7 @@ def randomCall():
                             , random_4 = result[4][0],  answer_4 = result[4][1]
                           )
 
-@app.route('/randomCallJson')
+@app.route('/front/randomCallJson')
 def randomCallJson():
     """정답 호출"""
     # http://localhost/randomCallJson
@@ -354,7 +354,7 @@ def randomCallJson():
         "result_data"   : json.loads(str(result[0][1]))
     }
 
-@app.route('/checkResult', methods=['POST']) 
+@app.route('/front/checkResult', methods=['POST']) 
 def checkResult():
     """오답 정리"""
     # http://localhost/checkResult

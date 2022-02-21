@@ -7,8 +7,11 @@ server {
 	location /static {
 		root /home/ubuntu/project/Flask;
 	}
+
 	location / {
 		include proxy_params;
 		proxy_pass http://unix:/tmp/gunicorn.sock;
 	}
+
+
 }

@@ -107,7 +107,9 @@ class GetUser(Resource):
                 "sum_point"       : result[0][3],
                 "floor_up"        : result[0][4],
                 "floor_down"      : result[0][5],
-                "calorie"         : result[0][6]
+                "calorie"         : result[0][6],
+                "company_code"    : result[0][7],
+                "imgString"       : result[0][8]
             }
 
 @Beacon.route('/register')
@@ -121,15 +123,17 @@ class PutUser(Resource):
         user_id = request.json.get('user_id')
         company_code = request.json.get('company_code')
         building_code = request.json.get('building_code')
+        Base64_profile = request.json.get('imgString')
 
         user_name_str = str(user_name)
         user_id_str = str(user_id)
         company_code_str = str(company_code)
         building_code_str = str(building_code)
+        Base64_profile_str = str(Base64_profile)
 
         cursor = conn.cursor()
 
-        params = (user_name_str, user_id_str, company_code_str, building_code_str)
+        params = (user_name_str, user_id_str, company_code_str, building_code_str, Base64_profile)
         cursor.callproc('SET_USER_INFO', params)
 
         result = [row for row in cursor]
@@ -814,7 +818,7 @@ class regUserGoal(Resource):
 class selectUserGoal(Resource):
 
     def post(self):
-        """사용자 목표 입력 (성공 : 01, 없음 : 02, 실패: 99)"""
+        """사용자 목표 조회 (성공 : 01, 없음 : 02, 실패: 99)"""
 
         # POST 방식으로 수신
         user_id = request.json.get('user_id')
@@ -850,7 +854,7 @@ class selectUserGoal(Resource):
                 "message"         : "fail",
                 "message_detail"  : str(result[0][1]).lower()
             }
-        # 등록 실패 - 없음
+        # 조회 실패 - 없음
         else:
             return {
                 "result"          : result[0][0],
@@ -917,8 +921,8 @@ class regGarage(Resource):
             }
 
 
-@Beacon.route('/selectGarage')
-class selectGarage(Resource):
+@Beacon.route('/garageSelect')
+class garageSelect(Resource):
 
     def post(self):
         """사용자 차고 입력 (성공 : 01, 없음 : 02, 실패: 99)"""
@@ -963,7 +967,88 @@ class selectGarage(Resource):
                 "message_detail"  : str( result[0][1]).lower()
             }
 
+# 8. 건물(Building) 관련 API
+# └ buildingSelect      : 건물 정보 조회
+# └ buildingSelectAll      : 건물 정보 조회
+@Beacon.route('/buildingSelect')
+class buildingSelect(Resource):
 
+    def post(self):
+        """건물 호출 (성공 : 01, 없음 : 02, 실패: 99)"""
+
+        # POST 방식으로 수신
+        building_code = request.json.get('building_code')
+
+        building_code_str = str(building_code)
+
+        cursor = conn.cursor()
+
+        params = (building_code_str, )
+        cursor.callproc('GET_BUILDING_INFO', params)
+
+        result = [row for row in cursor]
+
+        # cursor 정상적으로 종료 필요
+        # Autocommit을 지원하지 않음
+        # commit 전에 result에 결과값 맵핑 필수
+        cursor.close()
+        conn.commit()
+
+        # 등록 성공
+        if result[0][0] == '01' :
+            return {
+                "result"          : result[0][0],
+                "message"         : "success",
+                "result_data"     : json.loads(str(result[0][1]).lower())
+            }
+        # 등록 실패 - 기타
+        elif result[0][0] == '99':
+            return {
+                "result"          : result[0][0],
+                "message"         : "fail",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        # 조회 실패 - 없음
+        else:
+            return {
+                "result"          : result[0][0],
+                "message"         : "fail",
+                "message_detail"  : str( result[0][1]).lower()
+            }
+
+
+
+@Beacon.route('/buildingSelectAll')
+class buildingSelectAll(Resource):
+
+    def post(self):
+        """건물 전체 호출 (성공: 01, Data 없음: 02, 실패: 99)"""
+
+        # POST 방식 및 요청값 없음
+        cursor = conn.cursor()
+        cursor.callproc('GET_BUILDING_INFO_ALL')
+
+        result = [row for row in cursor]
+
+        cursor.close()
+
+        if  result[0][0] == '01' :
+            return {
+                "result"          : "01",
+                "message"         : "success",
+                "result_data"     : json.loads(str(result[0][1]).lower())
+            }
+        elif result[0][0] == '02' :
+            return {
+                "result"          : "02",
+                "message"         : "success",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        else:
+            return {
+                "result"          : "99",
+                "message"         : "fail"
+            }
 
 # 99. BOT API
 # └ answerCall  : 정답 호출 - 미사용 (HTML 표현 불가로 app.py로 이관 - 2022.02.05)

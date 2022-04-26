@@ -1,3 +1,4 @@
+from xml.etree.ElementTree import XML
 from flask import request, render_template
 from flask_restx import Resource, Api, Namespace
 from multiprocessing import Process, Queue, Lock
@@ -996,14 +997,16 @@ class buildingSelect(Resource):
         cursor.close()
         conn.commit()
 
-        # 등록 성공
+        # 성공
         if result[0][0] == '01' :
             return {
                 "result"          : result[0][0],
                 "message"         : "success",
-                "result_data"     : json.loads(str(result[0][1]).lower())
+                "building_code"   : building_code_str.lower(),
+                # "result_data"     : json.loads(str(result[0][1]).lower())
+                "result_data"     : result[0][1].split('|')
             }
-        # 등록 실패 - 기타
+        # 실패 - 기타
         elif result[0][0] == '99':
             return {
                 "result"          : result[0][0],
@@ -1052,8 +1055,11 @@ class buildingSelectAll(Resource):
                 "message"         : "fail"
             }
 
+
+# 〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
 # 99. BOT API
 # └ answerCall  : 정답 호출 - 미사용 (HTML 표현 불가로 app.py로 이관 - 2022.02.05)
+# └ GGPI        : GGPI SEC 정보 수집 
 @Beacon.route('/answerCall/<seq_sub>')
 class GetAnswer(Resource):
 
@@ -1074,3 +1080,77 @@ class GetAnswer(Resource):
         return result[0][0]
         # return render_template('answerCorrect.html', answer=result[0][0])
         # return '<HTML>TEST</HTML>'
+
+
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.jobstores.base import JobLookupError
+from bs4 import BeautifulSoup
+import cfscrape
+import time
+
+@Beacon.route('/GGPI/<flag>')
+class GGPI(Resource):
+    def get(self, flag):
+
+        def crawling():
+            #〓〓〓〓〓〓〓〓〓〓〓〓Target Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
+            scraper = cfscrape.create_scraper()
+            url = 'https://www.sec.gov/Archives/edgar/data/0001847127'
+            response = scraper.get(url)
+            #〓〓〓〓〓〓〓〓〓〓〓〓Target Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
+
+            if response.status_code == 200:
+                html = response.text
+                soup = BeautifulSoup(html, 'html.parser')
+                # title = soup.select_one('#s_content > div.section > ul > li:nth-child(1) > dl > dt > a')
+                # title = soup.select_one('#main-content > table > tbody > tr:nth-child(2) > td:nth-child(1) > a')
+                title = soup.select_one('#main-content > table > tr > tr > td > a').text
+                
+                SEC_STR = str('0001847127')
+                SEC_SUB_STR = str(title)
+
+                cursor = conn_BOT.cursor()
+
+                params = (SEC_STR, SEC_SUB_STR)
+                cursor.callproc('SET_SEC_INFO', params)
+
+                result = [row for row in cursor]
+
+                # cursor 정상적으로 종료 필요
+                # Autocommit을 지원하지 않음
+                # commit 전에 result에 결과값 맵핑 필수
+                cursor.close()
+                conn_BOT.commit()
+            
+            else : 
+                print(response.status_code)
+
+
+        # Start
+        # http://localhost/Beacon/GGPI/1
+        if flag == '1':
+            # BackgroundScheduler을 사용하면 start를 먼저 하고 add_job을 이용해 수행할 것을 등록해줍니다.
+            sched = BackgroundScheduler()
+            sched.start()
+            sched.add_job(crawling, 'cron', second='*/1', id="SEC_1")
+
+            # while True:
+            #     print("Running main process...............")
+            #     time.sleep(1)
+            return "Job Activated!"
+
+        # Stop
+        # http://localhost/Beacon/GGPI/2
+        elif flag == '2':
+            try:
+                sched = BackgroundScheduler()
+                sched.start()
+                sched.remove_job("SEC_1")
+                return "Job Removed!"
+
+            except JobLookupError as err:
+                # print "fail to stop scheduler: %s" % err
+                return "Error!"
+
+        else :
+            print("Else")

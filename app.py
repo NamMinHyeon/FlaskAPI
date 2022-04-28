@@ -15,8 +15,8 @@ from flask_admin import helpers as admin_helpers
 from flask_admin import BaseView, expose
 from wtforms import PasswordField
 
-# log.py 참조
-import log 
+# # log.py 참조
+# import log 
 
 # 디버깅 모드 (중단점)
 # import pdb
@@ -289,26 +289,26 @@ def security_context_processor():
 #     app.logger.error('Page_not_found Access')
 #     return "There is no web page. Please enter the URL correctly.", 404
  
-@app.before_first_request
-def before_first_request():
-    print("Flask API Open")
-    # 즉 프린트문을 통해 어느 시점에서 첫요청이 일어나는지 확인
+# @app.before_first_request
+# def before_first_request():
+#     print("Flask API Open")
+#     # 즉 프린트문을 통해 어느 시점에서 첫요청이 일어나는지 확인
  
  
-@app.before_request
-def before_request():
-    # print("HTTP 요청이 들어올 때마다 실행")
-    # 라우팅 코드 직전에 실행
-    log.logInput(request, "BEFORE")
+# @app.before_request
+# def before_request():
+#     # print("HTTP 요청이 들어올 때마다 실행")
+#     # 라우팅 코드 직전에 실행
+#     log.logInput(request, "BEFORE")
  
  
-@app.after_request
-def after_request(response):
-    # print("HTTP 요청 처리가 끝나고 브라우저에 응답하기 전에 실행")
-    # 해당 요청이 발생하면 프린트문으로 확인하고, 응답 또한 보내줌.
-    # 라우팅 코드 직후에
-    log.logOutput(response, "└ AFTER")
-    return response
+# @app.after_request
+# def after_request(response):
+#     # print("HTTP 요청 처리가 끝나고 브라우저에 응답하기 전에 실행")
+#     # 해당 요청이 발생하면 프린트문으로 확인하고, 응답 또한 보내줌.
+#     # 라우팅 코드 직후에
+#     log.logOutput(response, "└ AFTER")
+#     return response
 
 # 99. BOT API
 # └ randomCall      : 리스트 호출 (HTML 사용)

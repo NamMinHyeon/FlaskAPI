@@ -500,7 +500,7 @@ class GetPoint(Resource):
                 "season_cd"       : season_cd_str,
                 "season_name"     : str(result[0][2]).lower(),
                 "result"          : "01",
-                "message"         : "SUCCESS",
+                "message"         : "success",
                 "result_data"     : json.loads(str(result[0][1]).lower())
             }
         elif result[0][0] == '02' :
@@ -764,7 +764,7 @@ class GetSeason(Resource):
 
 
 # 6. USER 관련 API
-# └ regUserGoal       : 사용자 목표 입력 API
+# └ regUserGoal          : 사용자 목표 입력 API
 # └ selectUserGoal       : 사용자 목표 조회 API
 @Beacon.route('/regUserGoal')
 class regUserGoal(Resource):
@@ -795,10 +795,30 @@ class regUserGoal(Resource):
         # 등록 성공
         if result[0][0] == '01' :
             return {
-                "result"          : result[0][0],
-                "message"         : "success",
-                "result_data"     : json.loads(str(result[0][1]).lower())
-                # "message_detail"  : str(result[0][1]).lower()
+                "result"            : result[0][0],
+                "message"           : "success",
+                "user_id"           : user_id_str.lower(),
+                "vehicle_code"      : vehicle_code_str.lower(),
+                "start_dt"          : json.loads(str(result[0][1]).lower())[0]["start_dt"],
+                "end_dt"            : json.loads(str(result[0][1]).lower())[0]["end_dt"],
+                "cur_step_count"    : json.loads(str(result[0][1]).lower())[0]["cur_step_count"],
+                "goal_step_count"   : json.loads(str(result[0][1]).lower())[0]["goal_step_count"],
+                "progress_rate"     : json.loads(str(result[0][1]).lower())[0]["progress_rate"],
+                "end_yn"            : json.loads(str(result[0][1]).lower())[0]["end_yn"]                
+            }
+        # 등록 실패 - 중복
+        elif result[0][0] == '02':
+            return {
+                "result"            : result[0][0],
+                "message"           : "success",
+                "user_id"           : user_id_str.lower(),
+                "vehicle_code"      : vehicle_code_str.lower(),
+                "start_dt"          : json.loads(str(result[0][1]).lower())[0]["start_dt"],
+                "end_dt"            : json.loads(str(result[0][1]).lower())[0]["end_dt"],
+                "cur_step_count"    : json.loads(str(result[0][1]).lower())[0]["cur_step_count"],
+                "goal_step_count"   : json.loads(str(result[0][1]).lower())[0]["goal_step_count"],
+                "progress_rate"     : json.loads(str(result[0][1]).lower())[0]["progress_rate"],
+                "end_yn"            : json.loads(str(result[0][1]).lower())[0]["end_yn"]   
             }
         # 등록 실패 - 기타
         elif result[0][0] == '99':
@@ -812,7 +832,7 @@ class regUserGoal(Resource):
             return {
                 "result"          : result[0][0],
                 "message"         : "fail",
-                "message_detail"  : str( result[0][1]).lower()
+                "message_detail"  : str(result[0][1]).lower()
             }
 
 
@@ -845,10 +865,16 @@ class selectUserGoal(Resource):
         # 등록 성공
         if result[0][0] == '01' :
             return {
-                "result"          : result[0][0],
-                "message"         : "success",
-                "result_data"     : json.loads(str(result[0][1]).lower())
-                # "message_detail"  : str(result[0][1]).lower()
+                "result"            : result[0][0],
+                "message"           : "success",
+                "user_id"           : user_id_str.lower(),
+                "vehicle_code"      : vehicle_code_str.lower(),
+                "start_dt"          : json.loads(str(result[0][1]).lower())[0]["start_dt"],
+                "end_dt"            : json.loads(str(result[0][1]).lower())[0]["end_dt"],
+                "cur_step_count"    : json.loads(str(result[0][1]).lower())[0]["cur_step_count"],
+                "goal_step_count"   : json.loads(str(result[0][1]).lower())[0]["goal_step_count"],
+                "progress_rate"     : json.loads(str(result[0][1]).lower())[0]["progress_rate"],
+                "end_yn"            : json.loads(str(result[0][1]).lower())[0]["end_yn"]   
             }
         # 등록 실패 - 기타
         elif result[0][0] == '99':
@@ -1089,6 +1115,8 @@ class GetAnswer(Resource):
 from apscheduler.schedulers.background import BackgroundScheduler
 from bs4 import BeautifulSoup
 import cfscrape
+import cloudscraper
+
 
 @Beacon.route('/GGPI/<flag>')
 class GGPI(Resource):
@@ -1127,6 +1155,55 @@ class GGPI(Resource):
             
             else : 
                 print(response.status_code)
+
+        sched = BackgroundScheduler(daemon=True) 
+
+        sched.start()
+
+        if flag == '1':
+            sched.add_job(crawling, 'interval', seconds=2, id="SEC_1")
+            # sched.remove_job("SEC_1")
+            
+            return "Job Activated!"
+
+        elif flag == '2':
+            sched.remove_all_jobs()
+            sched.shutdown()
+            
+            return "Job Removed!"
+
+
+
+
+@Beacon.route('/GGPI_2/<flag>')
+class GGPI(Resource):
+    def get(self, flag):
+        print("0")
+
+
+
+
+        def crawling():
+            print("00")
+            #〓〓〓〓〓〓〓〓〓〓〓〓Target Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
+            scraper = cloudscraper.create_scraper()
+            # scraper = cfscrape.create_scraper()
+            url = 'https://www.sec.gov/Archives/edgar/data/0001847127'
+
+            headers = {'User-Agent': 'Mozilla/5.0'}
+            response = scraper.get(url, headers=headers)
+            #〓〓〓〓〓〓〓〓〓〓〓〓Target Config〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
+            print("1")
+
+
+            cursor = conn_BOT.cursor()
+            params = (response.status_code, '1')
+            cursor.callproc('SET_SEC_INFO', params)
+
+
+            cursor.close()
+            conn_BOT.commit()
+
 
         sched = BackgroundScheduler(daemon=True) 
 

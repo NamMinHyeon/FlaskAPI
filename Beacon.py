@@ -844,14 +844,15 @@ class selectUserGoal(Resource):
 
         # POST 방식으로 수신
         user_id = request.json.get('user_id')
-        vehicle_code = request.json.get('vehicle_code')
+        # vehicle_code = request.json.get('vehicle_code')
 
         user_id_str = str(user_id)
-        vehicle_code_str = str(vehicle_code)
+        # vehicle_code_str = str(vehicle_code)
 
         cursor = conn.cursor()
 
-        params = (user_id_str, vehicle_code_str)
+        # params = (user_id_str, vehicle_code_str)
+        params = (user_id_str, )
         cursor.callproc('GET_USER_GOAL_INFO', params)
 
         result = [row for row in cursor]
@@ -868,7 +869,8 @@ class selectUserGoal(Resource):
                 "result"            : result[0][0],
                 "message"           : "success",
                 "user_id"           : user_id_str.lower(),
-                "vehicle_code"      : vehicle_code_str.lower(),
+                # "vehicle_code"      : vehicle_code_str.lower(),
+                "vehicle_code"      : json.loads(str(result[0][1]).lower())[0]["vehicle_code"],
                 "start_dt"          : json.loads(str(result[0][1]).lower())[0]["start_dt"],
                 "end_dt"            : json.loads(str(result[0][1]).lower())[0]["end_dt"],
                 "cur_step_count"    : json.loads(str(result[0][1]).lower())[0]["cur_step_count"],

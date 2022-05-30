@@ -64,6 +64,49 @@ Beacon = Namespace(
 #     # 라우팅 코드 직후에
 
 
+
+
+
+
+
+# 0. 공통 API
+# └ getVersion       : App 버전 호출 API
+
+@Beacon.route('/getVersion')
+class getVersion(Resource):
+
+    def post(self):
+        """비콘 전체 호출 (성공: 01, Data 없음: 02, 실패: 99)"""
+
+        # POST 방식 및 요청값 없음
+        cursor = conn.cursor()
+        cursor.callproc('GET_VERSION_INFO')
+
+        result = [row for row in cursor]
+
+        cursor.close()
+
+        if  result[0][0] == '01' :
+            return {
+                "result"          : "01",
+                "message"         : "success",
+                "result_data"     : str(result[0][1]).lower()
+            }
+        elif result[0][0] == '02' :
+            return {
+                "result"          : "02",
+                "message"         : "success",
+                "message_detail"  : str(result[0][1]).lower()
+            }
+        else:
+            return {
+                "result"          : "99",
+                "message"         : "fail"
+            }
+
+
+
+
 # 1. 사용자 관련 API
 # └ login       : 사용자 로그인
 # └ register    : 사용자 등록
@@ -547,7 +590,8 @@ class GetPointRank(Resource):
                 "season_cd"       : season_cd_str,
                 "result"          : "01",
                 "message"         : "SUCCESS",
-                "result_data"     : json.loads(str(result[0][1]).lower())
+                # "result_data"     : json.loads(str(result[0][1]).lower())
+                "result_data"     : json.loads(str(result[0][1]))
             }
         elif result[0][0] == '02' :
             return {
@@ -979,9 +1023,11 @@ class garageSelect(Resource):
         # 등록 성공
         if result[0][0] == '01' :
             return {
+                "user_id"         : user_id_str.lower(),
                 "result"          : result[0][0],
                 "message"         : "success",
-                "message_detail"  : str(result[0][1]).lower()
+                # "message_detail"  : str(result[0][1]).lower()
+                "message_detail"  : json.loads(str(result[0][1]).lower())
             }
         # 등록 실패 - 기타
         elif result[0][0] == '99':

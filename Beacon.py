@@ -153,7 +153,9 @@ class GetUser(Resource):
                 "floor_down"      : result[0][5],
                 "calorie"         : result[0][6],
                 "company_code"    : result[0][7],
-                "imgString"       : result[0][8]
+                "activity_tm"     : result[0][8],
+                "activity_sec"    : result[0][9],
+                "imgString"       : result[0][10]
             }
 
 @Beacon.route('/register')
